@@ -12,7 +12,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onGoToCheckout }) => {
   const faqs = [
     {
       q: 'Como vou receber o material após o pagamento?',
-      a: 'A liberação é imediata e automática! Assim que a compra for confirmada (no Pix é instantâneo), você recebe em seu e-mail o link de acesso exclusivo para baixar o Guia Pet Comilão completo em formato digital (PDF de alta qualidade), juntamente com todos os 5 livros bônus e a calculadora inteligente de gramatura.',
+      a: 'A liberação é imediata e automática! Assim que a compra for confirmada (no Pix é instantâneo), você recebe em seu e-mail o link de acesso exclusivo para baixar o Guia Adeus Alergia Canina completo em formato digital (PDF de alta qualidade), com todas as 100 receitas de nutrição caseira, lista semáforo e a calculadora inteligente de gramatura.',
     },
     {
       q: 'Alimentação natural não sai mais cara do que ração seca?',
@@ -20,7 +20,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onGoToCheckout }) => {
     },
     {
       q: 'Não tenho tempo para cozinhar todo dia. Como resolver isso?',
-      a: 'Você não precisa cozinhar diariamente! No Bônus 5 você aprende o método das Marmitas Congeladas: você cozinha uma única vez a cada 15 ou 30 dias (leva menos de 2 horas), distribui as refeições já pesadas em potinhos herméticos e congela. No dia a dia, basta descongelar a porção na geladeira na noite anterior. É tão prático quanto servir ração seca.',
+      a: 'Você não precisa cozinhar diariamente! No guia você aprende o método das Marmitas Congeladas: você cozinha uma única vez a cada 15 ou 30 dias (leva menos de 2 horas), distribui as refeições já pesadas em potinhos herméticos e congela. No dia a dia, basta descongelar a porção na geladeira na noite anterior. É tão prático quanto servir ração seca.',
     },
     {
       q: 'Meu cão tem intolerância a frango ou carne bovina. Posso usar o guia?',
@@ -32,7 +32,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onGoToCheckout }) => {
     },
     {
       q: 'Como sei a quantidade exata de gramas para o peso dele?',
-      a: 'Você recebe como bônus a nossa Calculadora de Porção Diária & Gramas por Peso. Basta selecionar o peso, se o pet é castrado, o escore de condição corporal e o nível de atividade. A ferramenta calcula na hora quantos gramas servir por refeição.',
+      a: 'Você tem acesso à nossa Calculadora de Porção Diária & Gramas por Peso. Basta selecionar o peso, se o pet é castrado, o escore de condição corporal e o nível de atividade. A ferramenta calcula na hora quantos gramas servir por refeição.',
     },
     {
       q: 'Meu cão está acostumado apenas com ração há anos. Ele não vai ter diarreia?',

@@ -26,7 +26,7 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ onGoToChecko
           </h2>
 
           <p className="text-stone-700 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Adquira o <strong>Guia Pet Comilão</strong> hoje, acesse todas as 100 receitas, use a calculadora de dosagem e prepare as primeiras refeições para o seu cão.
+            Adquira o método <strong>Adeus Alergia Canina</strong> hoje, acesse todas as 100 receitas, use a calculadora de dosagem e prepare as primeiras refeições anti-inflamatórias para o seu cão.
           </p>
 
           {/* Guarantee Highlights */}

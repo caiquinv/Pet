@@ -54,13 +54,13 @@ export const PillarsSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <p className="text-xs uppercase tracking-widest font-extrabold text-emerald-700 mb-2">
-            Metodologia Pet Comilão
+            Método Nutrição Caseira Anti-Alergia
           </p>
           <h2 className="text-3xl sm:text-4xl font-black text-stone-900 tracking-tight leading-tight mb-4">
-            Os 4 Pilares da Alimentação Natural Segura
+            Os 4 Pilares para Desinflamar a Pele e Eliminar as Alergias
           </h2>
           <p className="text-base sm:text-lg text-stone-600">
-            Alimentação Natural <strong>não é dar restos de comida do almoço</strong>. É uma rotina pensada com carinho, ingredientes certos e equilíbrio para o organismo do seu cão florescer.
+            Comida caseira para cães <strong>não é dar restos temperados de mesa</strong>. É uma rotina bioapropriada, hipoalergênica e curativa, pensada para zerar as coceiras do seu filho peludo.
           </p>
         </div>
 
@@ -117,9 +117,9 @@ export const PillarsSection: React.FC = () => {
               <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-black text-lg mb-4">
                 04
               </div>
-              <h3 className="font-extrabold text-stone-900 text-lg mb-2">100 Receitas & Bônus</h3>
+              <h3 className="font-extrabold text-stone-900 text-lg mb-2">100 Receitas Balanceadas</h3>
               <p className="text-sm text-stone-600 leading-relaxed">
-                50 receitas cozidas + 50 cruas balanceadas, além da calculadora de gramas pelo peso e escore corporal do pet.
+                50 receitas cozidas + 50 cruas nutritivas, calculadas para o bem-estar e saúde gastrointestinal do cão.
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-stone-100 text-xs font-semibold text-blue-700 flex items-center gap-1">

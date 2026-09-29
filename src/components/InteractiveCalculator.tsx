@@ -67,7 +67,7 @@ export const InteractiveCalculator: React.FC = () => {
           </div>
         </div>
         <span className="text-xs font-black text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-md">
-          BÔNUS INCLUSO NO GUIA
+          FERRAMENTA INCLUSA NO GUIA
         </span>
       </div>
 

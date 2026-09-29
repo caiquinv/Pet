@@ -17,12 +17,12 @@ export const FooterSection: React.FC = () => {
                 🐾
               </span>
               <span className="font-extrabold text-lg text-white font-heading tracking-tight">
-                Guia Pet Comilão
+                Adeus Alergia Canina
               </span>
             </div>
             
             <p className="text-stone-400 text-xs leading-relaxed max-w-sm">
-              Iniciativa para democratizar a Alimentação Natural para cães no Brasil, promovendo saúde duradoura, pele sem coceiras e longevidade através de comida de verdade simples e acessível.
+              Método de Nutrição Caseira e Alimentação Natural desenvolvido para combater a raiz das dermatites, coceiras e alergias caninas através de comida fresca, limpa e balanceada.
             </p>
 
             <div className="pt-2 text-[11px] text-stone-400">
@@ -40,8 +40,8 @@ export const FooterSection: React.FC = () => {
               <li><a href="#pilares" className="hover:text-emerald-400 transition-colors">Os 4 Pilares da AN</a></li>
               <li><a href="#expert" className="hover:text-emerald-400 transition-colors">Conheça a Dra. Fernanda</a></li>
               <li><a href="#prova-social" className="hover:text-emerald-400 transition-colors">Antes e Depois / Depoimentos</a></li>
-              <li><a href="#bonus" className="hover:text-emerald-400 transition-colors">Calculadora & Bônus Inclusos</a></li>
               <li><a href="#oferta" className="hover:text-emerald-400 transition-colors">Garantir Guia por R$ 14,90</a></li>
+              <li><a href="#garantia" className="hover:text-emerald-400 transition-colors">Garantia Blindada</a></li>
               <li><a href="#faq" className="hover:text-emerald-400 transition-colors">Dúvidas Frequentes</a></li>
             </ul>
           </div>
@@ -84,7 +84,7 @@ export const FooterSection: React.FC = () => {
             <strong>Aviso Médico Veterinário Preventivo:</strong> Os conteúdos apresentados no Guia Pet Comilão têm finalidade educacional e de orientação sobre nutrição canina bioapropriada. Cada cão possui individualidades metabólicas, de idade e histórico de saúde. Em casos de suspeita de intoxicação, doenças renais ou hepáticas crônicas graves já instaladas, consulte sempre o médico veterinário de sua confiança.
           </p>
           <p>
-            © {new Date().getFullYear()} Guia Pet Comilão · Todos os direitos reservados.
+            © {new Date().getFullYear()} Adeus Alergia Canina: Método Nutrição Caseira · Todos os direitos reservados.
           </p>
         </div>
 

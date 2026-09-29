@@ -40,7 +40,7 @@ export const ExpertSection: React.FC = () => {
           <div className="lg:col-span-7 space-y-5">
             <div className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
               <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-              QUEM CRIOU O GUIA PET COMILÃO
+              QUEM CRIOU O MÉTODO ADEUS ALERGIA CANINA
             </div>
 
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-stone-900 tracking-tight leading-tight">
@@ -57,10 +57,10 @@ export const ExpertSection: React.FC = () => {
 
             <div className="p-4 bg-emerald-50/70 rounded-2xl border border-emerald-200 text-stone-800 text-sm leading-relaxed">
               <p className="font-semibold text-emerald-950 mb-1">
-                A Minha Missão com o Guia Pet Comilão
+                A Minha Missão com a Nutrição Caseira
               </p>
               <p className="text-xs sm:text-sm text-stone-700">
-                &ldquo;Criei este manual prático para que qualquer tutor, mesmo sem experiência na cozinha, consiga preparar refeições naturais, baratas e perfeitamente balanceadas para o seu cão. Ver o alívio das coceiras, a alegria no olhar e a saúde plena de volta é a maior recompensa da minha profissão.&rdquo;
+                &ldquo;Criei o método <strong>Adeus Alergia Canina</strong> para que qualquer tutor, mesmo sem experiência na cozinha, consiga preparar refeições caseiras, baratas e perfeitamente balanceadas para desinflamar o organismo do seu cão. Ver o alívio das coceiras, o fim das feridas e a saúde plena de volta é a maior recompensa da minha profissão.&rdquo;
               </p>
             </div>
 

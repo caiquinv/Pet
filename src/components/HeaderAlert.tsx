@@ -15,7 +15,7 @@ export const HeaderAlert: React.FC<HeaderAlertProps> = ({ onGoToCheckout }) => {
             <Flame className="w-3.5 h-3.5 text-orange-600 fill-orange-600" />
           </span>
           <p className="leading-tight">
-            <strong className="text-amber-300 font-semibold">Oferta Especial de Lançamento:</strong> Guia Completo + 100 Receitas + Calculadora de <span className="line-through opacity-80">R$ {ORIGINAL_PRICE}</span> por apenas <strong className="text-amber-300 font-black">R$ {PRICE}</strong> (Acesso Vitalício Imediato!)
+            <strong className="text-amber-300 font-semibold">Método Nutrição Caseira Anti-Alergia:</strong> Elimine as coceiras do seu cão de <span className="line-through opacity-80">R$ {ORIGINAL_PRICE}</span> por apenas <strong className="text-amber-300 font-black">R$ {PRICE}</strong> (Acesso Vitalício Imediato!)
           </p>
         </div>
 

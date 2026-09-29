@@ -123,7 +123,7 @@ export const SocialProofSection: React.FC = () => {
             </div>
             <div>
               <p className="text-sm sm:text-base font-medium italic text-emerald-50 leading-relaxed mb-3">
-                &ldquo;O Pipoca passou a primeira noite inteira sem sequer relar na pata depois de semanas de sofrimento. Fazia meses que eu não conseguia ter uma noite inteira de sono. O Guia Pet Comilão mudou a nossa rotina para sempre!&rdquo;
+                &ldquo;O Pipoca passou a primeira noite inteira sem sequer relar na pata depois de semanas de sofrimento. Fazia meses que eu não conseguia ter uma noite inteira de sono. O método Adeus Alergia Canina mudou a nossa rotina para sempre!&rdquo;
               </p>
               <p className="text-xs font-bold text-amber-300">
                 — Carla Silveira, tutora do Pipoca (Beagle de 5 anos)

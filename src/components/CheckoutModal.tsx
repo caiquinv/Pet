@@ -49,10 +49,10 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                 CHECKOUT 100% SEGURO
               </span>
               <h3 className="text-2xl font-black text-stone-900 mt-2">
-                Garanta o Guia Pet Comilão
+                Adeus Alergia Canina
               </h3>
               <p className="text-xs text-stone-600 mt-1">
-                Acesso vitalício instantâneo ao material completo por apenas <strong className="text-emerald-700 font-extrabold">R$ {PRICE}</strong>
+                Acesso vitalício ao Método de Nutrição Caseira por apenas <strong className="text-emerald-700 font-extrabold">R$ {PRICE}</strong>
               </p>
             </div>
 
@@ -222,18 +222,18 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                 className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-md cursor-pointer"
               >
                 <Download className="w-4 h-4" />
-                Baixar Guia Pet Comilão & 100 Receitas (PDF)
+                Baixar Guia Adeus Alergia Canina (PDF)
               </a>
 
               <button
                 onClick={() => {
                   onClose();
-                  const calcEl = document.getElementById('bonus');
+                  const calcEl = document.getElementById('pilares');
                   if (calcEl) calcEl.scrollIntoView({ behavior: 'smooth' });
                 }}
                 className="w-full bg-stone-100 hover:bg-stone-200 text-stone-800 font-semibold text-xs py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 cursor-pointer"
               >
-                Abrir Calculadora de Porção Diária
+                Ver Instruções dos 4 Pilares
               </button>
             </div>
 

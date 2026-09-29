@@ -83,15 +83,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout }) => {
           <div className="lg:col-span-6 flex flex-col">
             <div className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-lg w-fit mb-3">
               <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-              ACESSO IMEDIATO A TODO O MATERIAL
+              MÉTODO NUTRIÇÃO CASEIRA ANTI-ALERGIA
             </div>
 
             <h2 className="text-2xl sm:text-3xl font-black text-stone-900 tracking-tight leading-snug mb-3">
-              Aprenda o passo a passo exato para acabar com as coceiras do seu cão
+              Adeus Alergia Canina: o guia definitivo para acabar com as coceiras do seu cão
             </h2>
 
             <p className="text-sm sm:text-base text-stone-600 mb-5 leading-relaxed">
-              Tenha em mãos o guia prático completo da <strong>Dra. Fernanda Soares</strong>, com receitas econômicas, lista semáforo dos alimentos e calculadora automática de dosagem.
+              Tenha em mãos o método completo da <strong>Dra. Fernanda Soares</strong> com comida caseira anti-inflamatória, 100 receitas fáceis e seguras, lista semáforo dos alimentos e calculadora automática de dosagem.
             </p>
 
             {/* Benefit Checkmarks */}
@@ -100,19 +100,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout }) => {
                 <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
                   <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                 </span>
-                <span><strong>Noites de sono tranquilas:</strong> alívio rápido das coceiras e lambedura de patas</span>
+                <span><strong>Noites de sono tranquilas:</strong> alívio rápido das coceiras e lambedura compulsiva das patas</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
                   <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                 </span>
-                <span><strong>Guia Pet Comilão Completo:</strong> transição segura em 4 fases sem diarreia</span>
+                <span><strong>Comida Caseira Anti-inflamatória:</strong> transição segura em 4 fases sem diarreia</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
                   <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                 </span>
-                <span><strong>Bônus Exclusivo:</strong> Calculadora de Gramas exatas pelo peso e rotina do pet</span>
+                <span><strong>Calculadora de Gramas:</strong> dosagem exata diária pelo peso e rotina do pet</span>
               </li>
             </ul>
 
