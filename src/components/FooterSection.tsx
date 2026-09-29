@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ShieldCheck, Lock, Heart, FileText } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
+import { PRICE } from '../constants';
 
 export const FooterSection: React.FC = () => {
   const [modalType, setModalType] = useState<'termos' | 'privacidade' | null>(null);
@@ -22,12 +23,12 @@ export const FooterSection: React.FC = () => {
             </div>
             
             <p className="text-stone-400 text-xs leading-relaxed max-w-sm">
-              Método de Nutrição Caseira e Alimentação Natural desenvolvido para combater a raiz das dermatites, coceiras e alergias caninas através de comida fresca, limpa e balanceada.
+              Método de Nutrição Caseira e Alimentação Natural desenvolvido para apoiar a saúde da pele, o equilíbrio digestivo e o alívio da comichão em cães através de ingredientes frescos e equilibrados.
             </p>
 
             <div className="pt-2 text-[11px] text-stone-400">
-              <p>Autoria: Dra. Fernanda Soares (Médica Veterinária)</p>
-              <p>Distribuição Digital Segura</p>
+              <p>Coordenação: Dra. Sofia Martins (Médica Veterinária)</p>
+              <p>Edição Digital para Portugal</p>
             </div>
           </div>
 
@@ -37,12 +38,12 @@ export const FooterSection: React.FC = () => {
               Navegação
             </p>
             <ul className="space-y-1.5 text-stone-400">
-              <li><a href="#pilares" className="hover:text-emerald-400 transition-colors">Os 4 Pilares da AN</a></li>
-              <li><a href="#expert" className="hover:text-emerald-400 transition-colors">Conheça a Dra. Fernanda</a></li>
-              <li><a href="#prova-social" className="hover:text-emerald-400 transition-colors">Antes e Depois / Depoimentos</a></li>
-              <li><a href="#oferta" className="hover:text-emerald-400 transition-colors">Garantir Guia por R$ 14,90</a></li>
-              <li><a href="#garantia" className="hover:text-emerald-400 transition-colors">Garantia Blindada</a></li>
-              <li><a href="#faq" className="hover:text-emerald-400 transition-colors">Dúvidas Frequentes</a></li>
+              <li><a href="#pilares" className="hover:text-emerald-400 transition-colors">Os 4 Pilares da Nutrição</a></li>
+              <li><a href="#expert" className="hover:text-emerald-400 transition-colors">Dra. Sofia Martins</a></li>
+              <li><a href="#prova-social" className="hover:text-emerald-400 transition-colors">Experiências e Testemunhos</a></li>
+              <li><a href="#oferta" className="hover:text-emerald-400 transition-colors">Aceder ao Guia por {PRICE}</a></li>
+              <li><a href="#garantia" className="hover:text-emerald-400 transition-colors">Garantia de Satisfação</a></li>
+              <li><a href="#faq" className="hover:text-emerald-400 transition-colors">Perguntas Frequentes</a></li>
             </ul>
           </div>
 
@@ -56,22 +57,22 @@ export const FooterSection: React.FC = () => {
                 onClick={() => setModalType('termos')}
                 className="text-stone-400 hover:text-emerald-400 transition-colors underline cursor-pointer"
               >
-                Termos de Uso
+                Termos de Utilização
               </button>
               <span className="text-stone-600">·</span>
               <button
                 onClick={() => setModalType('privacidade')}
                 className="text-stone-400 hover:text-emerald-400 transition-colors underline cursor-pointer"
               >
-                Políticas de Privacidade
+                Política de Privacidade
               </button>
             </div>
 
             <div className="p-3 bg-stone-800/80 rounded-xl border border-stone-700/60 flex items-center gap-3">
               <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0" />
               <div className="text-[10px] text-stone-300 leading-snug">
-                <p className="font-bold text-white">Ambiente 100% Criptografado</p>
-                <p>Pagamento seguro com liberação imediata do conteúdo.</p>
+                <p className="font-bold text-white">Ambiente Seguro e Criptografado</p>
+                <p>Processamento seguro em conformidade com as normas europeias.</p>
               </div>
             </div>
           </div>
@@ -81,10 +82,10 @@ export const FooterSection: React.FC = () => {
         {/* Disclaimer Warning */}
         <div className="pt-8 pb-4 text-[11px] text-stone-500 leading-relaxed max-w-4xl mx-auto text-center space-y-2">
           <p>
-            <strong>Aviso Médico Veterinário Preventivo:</strong> Os conteúdos apresentados no Guia Pet Comilão têm finalidade educacional e de orientação sobre nutrição canina bioapropriada. Cada cão possui individualidades metabólicas, de idade e histórico de saúde. Em casos de suspeita de intoxicação, doenças renais ou hepáticas crônicas graves já instaladas, consulte sempre o médico veterinário de sua confiança.
+            <strong>Nota Responsável de Saúde Animal:</strong> Os conteúdos apresentados no método Adeus Alergia Canina têm finalidade puramente educativa e de apoio à alimentação equilibrada do cão. Não constituem consulta médica veterinária nem substituem o diagnóstico, acompanhamento ou prescrição de um médico veterinário, especialmente em casos de doenças crónicas, infeções bacterianas graves ou alterações renais pré-existentes.
           </p>
           <p>
-            © {new Date().getFullYear()} Adeus Alergia Canina: Método Nutrição Caseira · Todos os direitos reservados.
+            © {new Date().getFullYear()} Adeus Alergia Canina: Método de Nutrição Caseira · Todos os direitos reservados.
           </p>
         </div>
 
@@ -103,15 +104,15 @@ export const FooterSection: React.FC = () => {
             
             {modalType === 'termos' ? (
               <div className="space-y-3 text-xs leading-relaxed">
-                <h3 className="text-lg font-black text-stone-900 mb-2">Termos de Uso</h3>
-                <p>Ao adquirir o Guia Pet Comilão, você recebe uma licença individual e intransferível de uso pessoal dos e-books e materiais complementares.</p>
-                <p>O valor de R$ 14,90 é cobrado em parcela única, garantindo acesso vitalício ao conteúdo sem taxas adicionais ou assinaturas recorrentes.</p>
+                <h3 className="text-lg font-black text-stone-900 mb-2">Termos de Utilização</h3>
+                <p>Ao adquirir o Guia Adeus Alergia Canina, é concedida uma licença individual, pessoal e intransferível de consulta do ficheiro digital e dos materiais complementares.</p>
+                <p>O valor de {PRICE} corresponde a um pagamento único, garantindo acesso continuado ao material sem qualquer subscrição ou mensalidade adicional.</p>
               </div>
             ) : (
               <div className="space-y-3 text-xs leading-relaxed">
-                <h3 className="text-lg font-black text-stone-900 mb-2">Políticas de Privacidade</h3>
-                <p>Seus dados cadastrais informados durante o pagamento são processados de forma estritamente segura e criptografada por gateways bancários certificados.</p>
-                <p>Não compartilhamos nem comercializamos seus dados com terceiros em hipótese alguma.</p>
+                <h3 className="text-lg font-black text-stone-900 mb-2">Política de Privacidade</h3>
+                <p>Os dados fornecidos no ato da encomenda são tratados com rigor e confidencialidade, destinando-se exclusivamente ao envio do material digital adquirido.</p>
+                <p>Não partilhamos nem cedemos dados a terceiros, em estrito respeito pelo Regulamento Geral sobre a Proteção de Dados (RGPD).</p>
               </div>
             )}
 
@@ -119,7 +120,7 @@ export const FooterSection: React.FC = () => {
               onClick={() => setModalType(null)}
               className="mt-6 w-full py-2.5 bg-stone-900 text-white rounded-xl font-bold text-xs hover:bg-stone-800 cursor-pointer"
             >
-              Entendi e Fechar
+              Fechar
             </button>
           </div>
         </div>

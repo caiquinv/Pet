@@ -1,18 +1,18 @@
 import React from 'react';
-import { HeartCrack, AlertCircle, Sparkles, Moon, UtensilsCrossed, ShieldAlert } from 'lucide-react';
+import { Sparkles, UtensilsCrossed, ShieldAlert } from 'lucide-react';
 
 export const ConnectionSection: React.FC = () => {
   return (
     <section className="py-16 sm:py-24 bg-white border-y border-stone-200/80 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Anti-slop kicker */}
+        {/* Header */}
         <div className="text-center mb-10">
           <p className="text-xs uppercase tracking-widest font-bold text-amber-600 mb-2">
-            A dor que ninguém te conta sobre a ração industrial
+            A realidade pouco falada sobre a ração seca industrializada
           </p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-stone-900 tracking-tight leading-tight">
-            &ldquo;Ele não sabe pedir socorro. E ele não escolhe o que come.&rdquo;
+            &ldquo;Ele não consegue dizer onde dói. E depende inteiramente de quem lhe enche a tigela.&rdquo;
           </h2>
         </div>
 
@@ -21,13 +21,13 @@ export const ConnectionSection: React.FC = () => {
           
           <div className="bg-amber-50/60 p-6 sm:p-8 rounded-2xl border border-amber-200/70 shadow-xs relative">
             <span className="absolute -top-3 left-6 bg-amber-500 text-white text-xs font-bold px-3 py-0.5 rounded-full uppercase tracking-wider">
-              A Realidade Noturna
+              A Realidade da Noite
             </span>
             <p className="font-medium text-stone-800 italic text-lg sm:text-xl leading-relaxed mb-4">
-              &ldquo;São 2 horas da manhã. O silêncio da casa é quebrado pelo som desesperado do seu cão se coçando sem parar na quina da cama, ou lambendo e mordendo a própria pata com tanta fúria que parece que ela está pegando fogo.&rdquo;
+              &ldquo;Passa da meia-noite. O silêncio da casa é interrompido pelo som persistente do seu cão a coçar-se contra o chão, ou a lamber e morder as patas com um desassossego que parece não ter fim.&rdquo;
             </p>
             <p className="text-stone-700 text-sm sm:text-base">
-              Você acorda, tenta afagar, manda parar, passa pomada... Mas dali a dez minutos, o barulho volta. Você não dorme. Seu cão sofre. E o pior: <strong>ele não tem como dizer onde dói.</strong>
+              Levanta-se, tenta confortá-lo, pede para parar, aplica uma loção... Mas passado um quarto de hora, a comichão recomeça. Nem o tutor descansa, nem o animal tem sossego. E a parte mais difícil: <strong>ele não consegue explicar o que está a sentir.</strong>
             </p>
           </div>
 
@@ -35,38 +35,38 @@ export const ConnectionSection: React.FC = () => {
             <div className="bg-stone-50 p-6 rounded-2xl border border-stone-200">
               <div className="flex items-center gap-3 mb-3 text-rose-600">
                 <UtensilsCrossed className="w-5 h-5 shrink-0" />
-                <h3 className="font-bold text-stone-900 text-base">O Pote Cheio da Mesma Ração Seca</h3>
+                <h3 className="font-bold text-stone-900 text-base">A Mesma Ração Seca Todos os Dias</h3>
               </div>
               <p className="text-sm text-stone-600 leading-relaxed">
-                Quem enche o pote todo santo dia somos nós. E colocamos sempre a mesma bolinha marrom ultraprocessada. Uma ração que passou por temperaturas superiores a 200°C, perdeu seus nutrientes vitais, tem menos de <strong>10% de umidade</strong> e é entupida de conservantes químicos e corantes.
+                Diariamente colocamos na tigela o mesmo granulado castanho ultraprocessado. Uma ração sujeita a temperaturas elevadíssimas, com menos de <strong>10% de humidade natural</strong> e frequentemente com conservantes e corantes artificiais que podem sobrecarregar o organismo de cães mais sensíveis.
               </p>
             </div>
 
             <div className="bg-stone-50 p-6 rounded-2xl border border-stone-200">
               <div className="flex items-center gap-3 mb-3 text-amber-600">
                 <ShieldAlert className="w-5 h-5 shrink-0" />
-                <h3 className="font-bold text-stone-900 text-base">O Intestino Pede Socorro na Pele</h3>
+                <h3 className="font-bold text-stone-900 text-base">A Pele Reflete a Saúde Digestiva</h3>
               </div>
               <p className="text-sm text-stone-600 leading-relaxed">
-                Poucos tutores sabem, mas <strong>mais de 75% da imunidade do cão vem do estômago e intestino</strong>. Quando o estômago vive inflamado e cronicamente desidratado, o organismo dele tenta expelir as toxinas através do maior órgão que ele tem: a pele e as orelhas.
+                Grande parte das defesas do organismo de um cão está diretamente ligada ao trato gastrointestinal. Quando o sistema digestivo permanece sensibilizado e cronicamente desidratado, as manifestações acabam muitas vezes por surgir no maior órgão do animal: <strong>a pele, as patas e os ouvidos</strong>.
               </p>
             </div>
           </div>
 
-          {/* Emotional Call to Action */}
+          {/* Constructive Call to Action */}
           <div className="bg-emerald-900 text-white p-6 sm:p-8 rounded-2xl shadow-md space-y-4">
             <div className="flex items-center gap-2 text-emerald-300 font-bold text-sm">
               <Sparkles className="w-4 h-4 text-emerald-400" />
-              <span>A BOA NOTÍCIA: A SOLUÇÃO ESTÁ NA SUA COZINHA</span>
+              <span>UMA ABORDAGEM SIMPLES E CASEIRA</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-bold leading-snug">
-              Não precisa de remédios caros com efeitos colaterais para o resto da vida.
+              É possível apoiar a saúde do seu cão com comida simples do supermercado.
             </h3>
             <p className="text-emerald-100 text-sm sm:text-base leading-relaxed">
-              Ao trocar a ração ressecada por ingredientes frescos, biocompatíveis e nutritivos (carnes selecionadas, legumes digestivos e fibras certas), o estômago dele finalmente <strong>sossega e se hidrata</strong>. Em poucos dias, a coceira cessa, o pelo volta a brilhar e a casa inteira volta a ter noites de sono tranquilas.
+              Ao introduzir gradualmente ingredientes frescos, hidratantes e adequados (carnes magras bem selecionadas, legumes de fácil digestão e fibras naturais), o organismo encontra nutrientes bioapropriados. Em pouco tempo, a comichão pode reduzir de forma notória, o pelo ganha vigor e a família volta a desfrutar de noites tranquilas.
             </p>
             <div className="pt-2 text-xs sm:text-sm text-emerald-200/90 font-medium">
-              E o melhor: você gasta <strong>menos</strong> no mercado do que gastaria com um único saco de ração medicamentosa de pet shop.
+              E com um benefício claro: preparar alimentação caseira pode ficar <strong>mais económico</strong> no talho e na mercearia do que manter rações especiais de valor muito elevado.
             </div>
           </div>
 

@@ -1,29 +1,29 @@
 import React from 'react';
-import { Star, CheckCircle, Heart, Sparkles, MessageSquareQuote } from 'lucide-react';
+import { Star, CheckCircle, Heart, MessageSquareQuote } from 'lucide-react';
 import { ASSETS } from '../constants';
 
 export const SocialProofSection: React.FC = () => {
   const testimonials = [
     {
       name: 'Mariana & Fred (Shih Tzu, 4 anos)',
-      location: 'São Paulo - SP',
-      text: 'O Fred acordava às 3h da manhã chorando e lambendo a pata até ficar em carne viva. Eu já tinha gasto mais de R$ 900 com consultas e ração hipoalergênica. Quando comecei a aplicar o Guia Pet Comilão com as receitinhas de carne com abóbora e cenoura ralada, em 5 dias ele parou completamente de se roer. O investimento no guia foi a melhor decisão que tomei!',
+      location: 'Porto',
+      text: 'O Fred acordava a meio da noite a morder as patas com tanto afinco que ficavam bastante irritadas. Já tínhamos gasto bastante com rações especiais de linha veterinária. Quando começámos a aplicar o método com receitas caseiras de carne picada e abóbora cozida, a comichão acalmou em poucos dias. Notámos uma diferença enorme no descanso da casa.',
       rating: 5,
-      highlight: 'Parou de lamber as patas em 5 dias',
+      highlight: 'Redução notória da comichão nas patas',
     },
     {
-      name: 'Carlos Eduardo & Thor (Golden Retriever, 3 anos)',
-      location: 'Curitiba - PR',
-      text: 'Achava que alimentação natural pra Golden ia me custar uma fortuna porque ele come muito. Mas com o Guia Pet Comilão e o método das marmitas congeladas, gasto menos do que gastava com o saco de 15kg de ração super premium! O pelo dele nunca teve tanto brilho e a queda reduziu drasticamente.',
+      name: 'Carlos & Thor (Golden Retriever, 3 anos)',
+      location: 'Lisboa',
+      text: 'Tinha receio de que preparar comida caseira para um Golden ficasse dispendioso por causa do porte dele. Mas com a organização de porções no congelador, as compras no talho acabam por compensar em comparação com sacos de ração cara. O pelo dele está muito mais bonito e com menos queda.',
       rating: 5,
-      highlight: 'Economizou mais de R$ 200 no mês',
+      highlight: 'Mais económico e pelo com mais vigor',
     },
     {
-      name: 'Juliana Mendes & Mel (SRD, 6 anos)',
-      location: 'Belo Horizonte - MG',
-      text: 'A Mel vomitava aquela babinha amarela quase toda manhã e tinha um hálito bem forte. Descobri na Lista Semáforo como a ração seca tava irritando o estômago dela. Fiz a transição certinha em 7 dias como o guia ensina. Hoje ela devora todo o prato feliz da vida e nunca mais teve refluxo.',
+      name: 'Juliana & Mel (Sem Raça Definida, 6 anos)',
+      location: 'Coimbra',
+      text: 'A Mel vomitava com frequência pela manhã e mostrava pouco interesse pela ração seca. A Lista Semáforo ajudou-me a perceber o que podia estar a irritar a digestão dela. Fizemos a transição em 7 etapas e hoje ela come tudo com gosto e sem indisposições.',
       rating: 5,
-      highlight: 'Fim dos vômitos e refluxo gástrico',
+      highlight: 'Mais apetite e digestão tranquila',
     },
   ];
 
@@ -35,13 +35,13 @@ export const SocialProofSection: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-100/70 px-3 py-1 rounded-full mb-3">
             <Heart className="w-3.5 h-3.5 fill-rose-500 text-rose-500" />
-            HISTÓRIAS REAIS DE TRANSFORMAÇÃO
+            EXPERIÊNCIAS DE QUEM JÁ EXPERIMENTOU
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-stone-900 tracking-tight leading-tight mb-4">
-            Veja o que acontece quando você troca a ração seca por Comida de Verdade
+            Veja a diferença que a comida fresca pode fazer na rotina do seu cão
           </h2>
           <p className="text-stone-600 text-base sm:text-lg">
-            Mais de <strong>4.700 tutores</strong> já devolveram a tranquilidade para as suas noites e a saúde para o prato de seus cães.
+            Tutores que decidiram rever a alimentação diária dos seus animais e encontraram uma solução mais natural e equilibrada.
           </p>
         </div>
 
@@ -51,30 +51,30 @@ export const SocialProofSection: React.FC = () => {
             <div className="md:col-span-6 rounded-2xl overflow-hidden shadow-inner border border-stone-100">
               <img
                 src={ASSETS.transformation}
-                alt="Antes e depois de cão com pele recuperada e alegre"
+                alt="Exemplo de cão com pelagem recuperada e ar saudável"
                 className="w-full h-64 sm:h-72 object-cover object-center"
               />
             </div>
 
             <div className="md:col-span-6 space-y-4">
               <span className="text-xs font-black text-emerald-800 bg-emerald-100 px-3 py-1 rounded-md uppercase tracking-wider">
-                Resultado Comprovado
+                Evolução Positiva
               </span>
               <h3 className="text-xl sm:text-2xl font-black text-stone-900 leading-snug">
-                De noites em claro se coçando a uma pelagem densa, brilhante e estômago em paz
+                De noites agitadas com comichão a uma pelagem densa, brilhante e dias mais felizes
               </h3>
               <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
-                Ao eliminar as farinhas ultraprocessadas, conservantes químicos e o excesso de sódio das rações industriais, o organismo do cão desinflama de dentro para fora. A vermelhidão da pele desaparece e os pelos voltam a crescer fortes e sedosos.
+                Ao reduzir o recurso a farinhas ultraprocessadas e ingredientes desidratados das rações industriais, o organismo do cão tem oportunidade de recuperar. A pele acalma e os pelos ganham um aspeto mais sedoso e resistente.
               </p>
 
               <div className="grid grid-cols-2 gap-3 pt-2 text-xs font-bold">
                 <div className="p-3 bg-rose-50 border border-rose-200 rounded-xl text-rose-900">
                   <p className="text-[11px] font-semibold text-rose-600">ANTES</p>
-                  <p>Coceira crônica, patas machucadas e fezes volumosas com odor forte</p>
+                  <p>Comichão frequente, desconforto nas patas e fezes volumosas com odor forte</p>
                 </div>
                 <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900">
-                  <p className="text-[11px] font-semibold text-emerald-600">DEPOIS (14 DIAS)</p>
-                  <p>Sono profundo a noite inteira, pele calma, hálito limpo e prato vazio</p>
+                  <p className="text-[11px] font-semibold text-emerald-600">APÓS A ADAPTAÇÃO</p>
+                  <p>Sono descansado, pele sem irritações aparentes e refeições feitas com apetite</p>
                 </div>
               </div>
             </div>
@@ -107,7 +107,7 @@ export const SocialProofSection: React.FC = () => {
               <div className="pt-4 border-t border-stone-100 flex items-center justify-between">
                 <div>
                   <p className="text-xs font-extrabold text-stone-900">{t.name}</p>
-                  <p className="text-[11px] text-stone-500">{t.location}</p>
+                  <p className="text-[11px] text-stone-500">{t.location} (Portugal)</p>
                 </div>
                 <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
               </div>
@@ -123,7 +123,7 @@ export const SocialProofSection: React.FC = () => {
             </div>
             <div>
               <p className="text-sm sm:text-base font-medium italic text-emerald-50 leading-relaxed mb-3">
-                &ldquo;O Pipoca passou a primeira noite inteira sem sequer relar na pata depois de semanas de sofrimento. Fazia meses que eu não conseguia ter uma noite inteira de sono. O método Adeus Alergia Canina mudou a nossa rotina para sempre!&rdquo;
+                &ldquo;Depois de semanas complicadas, foi um alívio vê-lo dormir a noite inteira sem passar horas a lamber as patas. O método Adeus Alergia Canina trouxe-nos a orientação simples de que precisávamos.&rdquo;
               </p>
               <p className="text-xs font-bold text-amber-300">
                 — Carla Silveira, tutora do Pipoca (Beagle de 5 anos)

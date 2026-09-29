@@ -18,15 +18,15 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ onGoToChecko
           </div>
 
           <p className="text-xs uppercase tracking-widest font-extrabold text-emerald-800 mb-2">
-            Garantia Incondicional de 7 Dias
+            Garantia de Satisfação de 7 Dias
           </p>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-stone-900 tracking-tight leading-tight mb-4">
-            Você não tem nada a perder. O risco é 100% nosso!
+            Experimente sem qualquer risco pessoal
           </h2>
 
           <p className="text-stone-700 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Adquira o método <strong>Adeus Alergia Canina</strong> hoje, acesse todas as 100 receitas, use a calculadora de dosagem e prepare as primeiras refeições anti-inflamatórias para o seu cão.
+            Adquira o método <strong>Adeus Alergia Canina</strong> hoje, consulte as 100 receitas, utilize a calculadora de dose e prepare as primeiras refeições frescas para o seu cão com total tranquilidade.
           </p>
 
           {/* Guarantee Highlights */}
@@ -35,10 +35,10 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ onGoToChecko
               <RotateCcw className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" />
               <div>
                 <h3 className="font-extrabold text-stone-900 text-sm mb-1">
-                  100% do seu dinheiro de volta
+                  Reembolso integral
                 </h3>
                 <p className="text-xs text-stone-600 leading-relaxed">
-                  Se por qualquer motivo você achar que o guia não valeu a pena, basta nos enviar um e-mail dentro de 7 dias e devolveremos cada centavo pago, sem burocracia.
+                  Se nos primeiros 7 dias considerar que o material não foi útil, basta enviar-nos uma mensagem por e-mail para receber a devolução total do valor pago, sem complicações.
                 </p>
               </div>
             </div>
@@ -47,10 +47,10 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ onGoToChecko
               <Lock className="w-6 h-6 text-amber-600 shrink-0 mt-0.5" />
               <div>
                 <h3 className="font-extrabold text-stone-900 text-sm mb-1">
-                  Acesso vitalício garantido
+                  Acesso permanente
                 </h3>
                 <p className="text-xs text-stone-600 leading-relaxed">
-                  O material é seu para sempre. Você pode baixar em PDF no celular, tablet ou computador e consultar quando quiser.
+                  O guia em PDF fica guardado no seu telemóvel, tablet ou computador para consultar sempre que necessitar, sem qualquer limite temporal.
                 </p>
               </div>
             </div>
@@ -61,7 +61,7 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ onGoToChecko
             className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm sm:text-base py-3 px-8 rounded-xl shadow-md transition-all hover:scale-105 active:scale-95 cursor-pointer"
           >
             <Sparkles className="w-4 h-4" />
-            <span>APROVEITAR GARANTIA E COMPRAR POR R$ {PRICE}</span>
+            <span>APROVEITAR A GARANTIA E ACEDER POR {PRICE}</span>
           </button>
 
         </div>

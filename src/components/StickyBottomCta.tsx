@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Zap, ShieldCheck, Lock } from 'lucide-react';
+import { Zap } from 'lucide-react';
 import { PRICE } from '../constants';
 
 interface StickyBottomCtaProps {
@@ -30,10 +30,10 @@ export const StickyBottomCta: React.FC<StickyBottomCtaProps> = ({ onGoToCheckout
         
         <div className="hidden sm:block">
           <p className="text-xs font-bold text-stone-900 leading-tight">
-            Adeus Alergia Canina: Método Nutrição Caseira
+            Adeus Alergia Canina: Método de Nutrição Caseira
           </p>
           <p className="text-[11px] text-emerald-700 font-semibold">
-            100 Receitas + Lista Semáforo por apenas R$ {PRICE} (Acesso Imediato)
+            100 Receitas + Lista Semáforo por apenas {PRICE} (Acesso Imediato)
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export const StickyBottomCta: React.FC<StickyBottomCtaProps> = ({ onGoToCheckout
           className="w-full sm:w-auto flex-1 sm:flex-initial bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-black text-xs sm:text-sm py-3 px-6 rounded-xl shadow-md flex items-center justify-center gap-2 cursor-pointer transition-transform active:scale-95"
         >
           <Zap className="w-4 h-4 fill-white text-emerald-600 shrink-0" />
-          <span>GARANTIR ACESSO IMEDIATO POR R$ {PRICE}</span>
+          <span>QUERO O GUIA POR {PRICE}</span>
         </button>
 
       </div>

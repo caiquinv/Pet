@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Check, Copy, QrCode, ShieldCheck, Download, Sparkles, Lock, CreditCard, ArrowRight } from 'lucide-react';
+import { X, Check, ShieldCheck, Download, Sparkles, CreditCard, Smartphone } from 'lucide-react';
 import { PRICE } from '../constants';
 
 interface CheckoutModalProps {
@@ -8,22 +8,13 @@ interface CheckoutModalProps {
 }
 
 export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose }) => {
-  const [paymentMethod, setPaymentMethod] = useState<'pix' | 'card'>('pix');
-  const [copied, setCopied] = useState(false);
+  const [paymentMethod, setPaymentMethod] = useState<'card' | 'mbway'>('card');
   const [hasPaid, setHasPaid] = useState(false);
   const [buyerName, setBuyerName] = useState('');
   const [buyerEmail, setBuyerEmail] = useState('');
+  const [mbwayPhone, setMbwayPhone] = useState('');
 
   if (!isOpen) return null;
-
-  // Pix key for direct instant checkout
-  const pixKey = '11965034611';
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(pixKey);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 3000);
-  };
 
   const handleSimulatePayment = (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,30 +37,18 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
           <div>
             <div className="text-center mb-6">
               <span className="text-[10px] font-black uppercase tracking-wider text-emerald-800 bg-emerald-100 px-3 py-0.5 rounded-full">
-                CHECKOUT 100% SEGURO
+                PAGAMENTO 100% SEGURO
               </span>
               <h3 className="text-2xl font-black text-stone-900 mt-2">
                 Adeus Alergia Canina
               </h3>
               <p className="text-xs text-stone-600 mt-1">
-                Acesso vitalício ao Método de Nutrição Caseira por apenas <strong className="text-emerald-700 font-extrabold">R$ {PRICE}</strong>
+                Acesso vitalício ao Método de Nutrição Caseira por apenas <strong className="text-emerald-700 font-extrabold">{PRICE}</strong>
               </p>
             </div>
 
             {/* Payment Method Switcher */}
             <div className="grid grid-cols-2 gap-2 p-1.5 bg-stone-100 rounded-2xl mb-5">
-              <button
-                type="button"
-                onClick={() => setPaymentMethod('pix')}
-                className={`py-2 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer ${
-                  paymentMethod === 'pix'
-                    ? 'bg-emerald-600 text-white shadow-xs'
-                    : 'text-stone-600 hover:text-stone-900'
-                }`}
-              >
-                <QrCode className="w-3.5 h-3.5" />
-                Pix (Aprovação Imediata)
-              </button>
               <button
                 type="button"
                 onClick={() => setPaymentMethod('card')}
@@ -80,7 +59,19 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                 }`}
               >
                 <CreditCard className="w-3.5 h-3.5" />
-                Cartão de Crédito
+                Cartão Bancário
+              </button>
+              <button
+                type="button"
+                onClick={() => setPaymentMethod('mbway')}
+                className={`py-2 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer ${
+                  paymentMethod === 'mbway'
+                    ? 'bg-emerald-600 text-white shadow-xs'
+                    : 'text-stone-600 hover:text-stone-900'
+                }`}
+              >
+                <Smartphone className="w-3.5 h-3.5" />
+                MB WAY
               </button>
             </div>
 
@@ -88,12 +79,12 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
             <form onSubmit={handleSimulatePayment} className="space-y-4">
               <div>
                 <label className="block text-xs font-bold text-stone-800 mb-1">
-                  Seu Nome Completo:
+                  Nome Completo:
                 </label>
                 <input
                   type="text"
                   required
-                  placeholder="Nome do tutor"
+                  placeholder="Ex.: Maria Santos"
                   value={buyerName}
                   onChange={(e) => setBuyerName(e.target.value)}
                   className="w-full px-3.5 py-2 text-xs bg-stone-50 border border-stone-200 rounded-xl focus:outline-none focus:border-emerald-500 font-medium"
@@ -102,55 +93,24 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
 
               <div>
                 <label className="block text-xs font-bold text-stone-800 mb-1">
-                  Seu Melhor E-mail (Onde você receberá o material):
+                  O seu e-mail (onde receberá o acesso ao guia):
                 </label>
                 <input
                   type="email"
                   required
-                  placeholder="seuemail@exemplo.com"
+                  placeholder="o.seu.email@exemplo.pt"
                   value={buyerEmail}
                   onChange={(e) => setBuyerEmail(e.target.value)}
                   className="w-full px-3.5 py-2 text-xs bg-stone-50 border border-stone-200 rounded-xl focus:outline-none focus:border-emerald-500 font-medium"
                 />
               </div>
 
-              {/* PIX TAB */}
-              {paymentMethod === 'pix' && (
-                <div className="bg-stone-50 p-4 rounded-2xl border border-stone-200 text-center space-y-3">
-                  <div className="w-32 h-32 mx-auto bg-white p-2 rounded-xl border border-stone-300 shadow-xs flex items-center justify-center">
-                    <QrCode className="w-24 h-24 text-stone-800" />
-                  </div>
-
-                  <p className="text-[11px] text-stone-600">
-                    Copie a chave Pix abaixo e pague no app do seu banco:
-                  </p>
-
-                  <div className="flex items-center justify-center gap-2 bg-white px-3 py-2 rounded-xl border border-stone-300 max-w-xs mx-auto">
-                    <span className="font-mono font-bold text-xs text-stone-800">
-                      (11) 96503-4611
-                    </span>
-                    <button
-                      type="button"
-                      onClick={handleCopy}
-                      className="bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold px-2 py-1 rounded-lg flex items-center gap-1 cursor-pointer transition-colors"
-                    >
-                      {copied ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
-                      {copied ? 'Copiado!' : 'Copiar'}
-                    </button>
-                  </div>
-
-                  <p className="text-[10px] text-stone-400">
-                    Beneficiário: KV Digital · Valor: <strong>R$ {PRICE}</strong>
-                  </p>
-                </div>
-              )}
-
               {/* CARD TAB */}
               {paymentMethod === 'card' && (
                 <div className="space-y-3 p-4 bg-stone-50 rounded-2xl border border-stone-200">
                   <div>
                     <label className="block text-[11px] font-bold text-stone-700 mb-1">
-                      Número do Cartão:
+                      Número do Cartão de Débito / Crédito:
                     </label>
                     <input
                       type="text"
@@ -186,19 +146,46 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                 </div>
               )}
 
+              {/* MB WAY TAB */}
+              {paymentMethod === 'mbway' && (
+                <div className="space-y-3 p-4 bg-stone-50 rounded-2xl border border-stone-200">
+                  <div className="text-center mb-2">
+                    <p className="text-xs font-bold text-stone-800">Pagamento por MB WAY</p>
+                    <p className="text-[11px] text-stone-500">
+                      Introduza o número de telemóvel associado ao seu MB WAY para confirmar o pedido na aplicação:
+                    </p>
+                  </div>
+                  <div>
+                    <label className="block text-[11px] font-bold text-stone-700 mb-1">
+                      Número de Telemóvel (+351):
+                    </label>
+                    <input
+                      type="tel"
+                      placeholder="912 345 678"
+                      value={mbwayPhone}
+                      onChange={(e) => setMbwayPhone(e.target.value)}
+                      className="w-full px-3 py-2 text-xs bg-white border border-stone-200 rounded-lg focus:outline-none focus:border-emerald-500 font-mono text-center"
+                    />
+                  </div>
+                  <p className="text-[10px] text-stone-400 text-center">
+                    Receberá de imediato uma notificação no seu telemóvel para autorizar o valor de <strong>{PRICE}</strong>.
+                  </p>
+                </div>
+              )}
+
               {/* Submit CTA */}
               <button
                 type="submit"
                 className="w-full bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-extrabold text-sm sm:text-base py-3.5 px-4 rounded-xl shadow-lg shadow-emerald-700/20 transition-all flex items-center justify-center gap-2 cursor-pointer mt-4"
               >
                 <Check className="w-5 h-5" />
-                <span>CONCLUIR COMPRA DE R$ {PRICE} · LIBERAR GUIA</span>
+                <span>CONFIRMAR POR {PRICE} · ACEDER AO GUIA</span>
               </button>
             </form>
 
             <div className="flex items-center justify-center gap-2 text-[11px] text-stone-500 mt-4">
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              <span>Garantia de 7 dias com devolução integral do valor se não amar.</span>
+              <span>Garantia de 7 dias com reembolso total se não ficar satisfeito.</span>
             </div>
           </div>
         ) : (
@@ -212,7 +199,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
             </h3>
 
             <p className="text-xs sm:text-sm text-stone-600 max-w-sm mx-auto leading-relaxed">
-              Parabéns por dar esse passo de saúde para o seu pet! O seu acesso já foi liberado. Faça o download agora mesmo dos e-books e utilize a calculadora:
+              Obrigado pela sua confiança. O seu acesso já está disponível. Pode descarregar de imediato o guia em formato digital e consultar as receitas:
             </p>
 
             <div className="space-y-2 pt-2">
@@ -222,7 +209,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                 className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-md cursor-pointer"
               >
                 <Download className="w-4 h-4" />
-                Baixar Guia Adeus Alergia Canina (PDF)
+                Descarregar Guia Adeus Alergia Canina (PDF)
               </a>
 
               <button
@@ -241,7 +228,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
               onClick={onClose}
               className="text-xs text-stone-400 hover:text-stone-700 block mx-auto pt-2 cursor-pointer"
             >
-              Fechar Janela
+              Fechar
             </button>
           </div>
         )}

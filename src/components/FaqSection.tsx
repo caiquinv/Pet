@@ -11,36 +11,36 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onGoToCheckout }) => {
 
   const faqs = [
     {
-      q: 'Como vou receber o material após o pagamento?',
-      a: 'A liberação é imediata e automática! Assim que a compra for confirmada (no Pix é instantâneo), você recebe em seu e-mail o link de acesso exclusivo para baixar o Guia Adeus Alergia Canina completo em formato digital (PDF de alta qualidade), com todas as 100 receitas de nutrição caseira, lista semáforo e a calculadora inteligente de gramatura.',
+      q: 'Como recebo o acesso após a confirmação do pagamento?',
+      a: 'O envio é imediato e automático! Logo que o pagamento seja processado, recebe no seu e-mail a ligação exclusiva para descarregar o Guia Adeus Alergia Canina em formato digital (ficheiro PDF de leitura fácil em qualquer telemóvel, tablet ou computador), com as 100 receitas, a lista semáforo e o acesso à calculadora.',
     },
     {
-      q: 'Alimentação natural não sai mais cara do que ração seca?',
-      a: 'Não! O guia foi elaborado justamente para desmistificar isso. As receitas utilizam cortes baratos e ricos em nutrientes (moela, carne moída, frango, ovos caipiras) e legumes sazonais da feira (abóbora, cenoura, abobrinha). Um cão de porte pequeno a médio consome entre R$ 110 e R$ 160 por mês em comida fresca, o que é muito mais barato do que qualquer ração super premium ou medicamentosa.',
+      q: 'A alimentação caseira não fica mais cara do que a ração seca?',
+      a: 'Pelo contrário! O objetivo do método é recorrer a ingredientes comuns e nutritivos (como carne de frango ou vaca picada, miudezas, ovos, abóbora, cenoura e curgete). Em Portugal, a alimentação fresca de um cão de porte pequeno a médio costuma rondar entre 30 € e 45 € mensais, um valor significativamente mais baixo do que sacos de rações veterinárias especiais.',
     },
     {
-      q: 'Não tenho tempo para cozinhar todo dia. Como resolver isso?',
-      a: 'Você não precisa cozinhar diariamente! No guia você aprende o método das Marmitas Congeladas: você cozinha uma única vez a cada 15 ou 30 dias (leva menos de 2 horas), distribui as refeições já pesadas em potinhos herméticos e congela. No dia a dia, basta descongelar a porção na geladeira na noite anterior. É tão prático quanto servir ração seca.',
+      q: 'Não tenho disponibilidade para cozinhar todos os dias. Como posso organizar-me?',
+      a: 'Não precisa de cozinhar diariamente! O método ensina a planear e preparar as doses a cada 15 ou 20 dias: prepara a comida numa única ocasião (em cerca de hora e meia), distribui as doses pesadas em caixas herméticas e guarda no congelador. No dia a dia, basta passar a porção para o frigorífico na véspera. É tão prático como deitar ração na tigela.',
     },
     {
-      q: 'Meu cão tem intolerância a frango ou carne bovina. Posso usar o guia?',
-      a: 'Com certeza! O material traz cardápios variados com fontes proteicas alternativas (peixes frescos ricos em ômega 3 como a sardinha, carne suína magra como lombo e ovos), ideais para cães que sofrem com alergias e intolerâncias alimentares.',
+      q: 'O meu cão é intolerante ao frango. Posso aplicar o método?',
+      a: 'Sem dúvida! O material apresenta diversas alternativas proteicas (carne de peru, carne de vaca, peixes ricos em ómega-3 como a sardinha, ou carne de porco magra), permitindo contornar sensibilidades alimentares específicas com facilidade.',
     },
     {
-      q: 'Cães filhotes, idosos ou castrados podem consumir alimentação natural?',
-      a: 'Sim, e eles se beneficiam imensamente! O guia traz orientações específicas para ajustar o percentual de cálcio e proteínas para filhotes em desenvolvimento, bem como ajustes de fibras e carnes magras para cães idosos e castrados que necessitam de controle calórico.',
+      q: 'Cães seniores, cães jovens ou animais esterilizados podem beneficiar da alimentação natural?',
+      a: 'Sim, desde que a dose calórica e os nutrientes sejam devidamente equilibrados. O guia e a calculadora incluem orientações de ajuste para animais esterilizados com tendência a ganhar peso, bem como para cães com ritmo de vida mais calmo ou animais jovens.',
     },
     {
-      q: 'Como sei a quantidade exata de gramas para o peso dele?',
-      a: 'Você tem acesso à nossa Calculadora de Porção Diária & Gramas por Peso. Basta selecionar o peso, se o pet é castrado, o escore de condição corporal e o nível de atividade. A ferramenta calcula na hora quantos gramas servir por refeição.',
+      q: 'Como sei a gramagem exata para o peso do meu cão?',
+      a: 'Tem acesso à nossa Calculadora de Dose Diária. Basta introduzir o peso atual, se o cão está esterilizado, a condição corporal e o nível de atividade. A ferramenta indica de imediato quantas gramas deve colocar na tigela em cada refeição.',
     },
     {
-      q: 'Meu cão está acostumado apenas com ração há anos. Ele não vai ter diarreia?',
-      a: 'Não, desde que você siga o Protocolo de Transição Segura em 4 Fases (Dias 1-2: 75% ração / 25% AN; Dias 3-4: 50%/50%; Dias 5-6: 25%/75%; Dia 7+: 100% AN). Essa transição gradual permite que a flora bacteriana intestinal se adapte de forma suave e sem desconfortos.',
+      q: 'O meu cão sempre comeu ração a vida toda. A transição pode causar diarreia?',
+      a: 'Se a transição for feita de forma repentina, o organismo pode estranhar. É exatamente por essa razão que o guia inclui o Protocolo de Transição Gradual em 4 Fases (Dias 1-2: 75% ração / 25% comida caseira; Dias 3-4: 50%/50%; Dias 5-6: 25%/75%; Dia 7+: 100% caseiro), permitindo uma adaptação intestinal harmoniosa.',
     },
     {
-      q: 'O pagamento de R$ 14,90 é mensal ou único?',
-      a: 'É um pagamento ÚNICO de apenas R$ 14,90. Não existe nenhuma assinatura, renovação automática ou cobrança futura. Você paga uma única vez e tem acesso vitalício a todo o material e atualizações.',
+      q: 'O valor de 14,90 € é uma mensalidade ou pagamento único?',
+      a: 'É um pagamento ÚNICO de 14,90 €. Não existe qualquer subscrição, fidelização nem cobranças posteriores. Garante acesso permanente ao material.',
     },
   ];
 
@@ -52,13 +52,13 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onGoToCheckout }) => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full mb-3">
             <HelpCircle className="w-3.5 h-3.5 text-emerald-700" />
-            TIRE TODAS AS SUAS DÚVIDAS
+            RESPOSTAS ÀS DÚVIDAS MAIS FREQUENTES
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-stone-900 tracking-tight leading-tight mb-4">
             Perguntas Frequentes
           </h2>
           <p className="text-stone-600 text-base">
-            Tudo o que você precisa saber antes de garantir seu acesso ao guia
+            Esclareça os aspetos principais antes de aceder ao guia
           </p>
         </div>
 
@@ -97,14 +97,14 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onGoToCheckout }) => {
         {/* Bottom CTA Box */}
         <div className="text-center p-6 bg-emerald-50 rounded-2xl border border-emerald-200 max-w-xl mx-auto">
           <p className="text-xs sm:text-sm font-bold text-emerald-950 mb-3">
-            Pronto para transformar a saúde do seu cão com comida de verdade?
+            Pronto para apoiar o conforto e a alimentação do seu cão com comida simples e fresca?
           </p>
           <button
             onClick={onGoToCheckout}
             className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-xs transition-transform hover:scale-105 active:scale-95 cursor-pointer"
           >
             <Zap className="w-4 h-4 fill-white" />
-            GARANTIR MEU ACESSO IMEDIATO POR R$ {PRICE}
+            GARANTIR ACESSO IMEDIATO POR {PRICE}
           </button>
         </div>
 

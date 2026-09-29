@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, ShieldCheck } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 const NOTIFICATIONS = [
-  { name: 'Ana Paula e Bob (Spitz Alemão)', city: 'Campinas - SP', time: 'há 3 minutos' },
-  { name: 'Rodrigo e Amora (Bulldog Francês)', city: 'Belo Horizonte - MG', time: 'há 7 minutos' },
-  { name: 'Camila e Luke (Golden Retriever)', city: 'Porto Alegre - RS', time: 'há 11 minutos' },
-  { name: 'Fernando e Mel (SRD)', city: 'Rio de Janeiro - RJ', time: 'há 14 minutos' },
-  { name: 'Beatriz e Thor (Shih Tzu)', city: 'Brasília - DF', time: 'há 18 minutos' },
+  { name: 'Ana & Bob (Spitz Alemão)', city: 'Porto', time: 'há 3 minutos' },
+  { name: 'Rodrigo & Amora (Buldogue Francês)', city: 'Lisboa', time: 'há 7 minutos' },
+  { name: 'Inês & Luke (Golden Retriever)', city: 'Coimbra', time: 'há 11 minutos' },
+  { name: 'Tiago & Mel (SRD)', city: 'Braga', time: 'há 14 minutos' },
+  { name: 'Beatriz & Thor (Shih Tzu)', city: 'Faro', time: 'há 18 minutos' },
 ];
 
 export const RecentBuyerToast: React.FC = () => {
@@ -44,7 +44,7 @@ export const RecentBuyerToast: React.FC = () => {
       </div>
       <div className="text-left text-xs leading-tight">
         <p className="font-bold text-stone-900">{item.name}</p>
-        <p className="text-[11px] text-stone-500">{item.city} · garantiu o guia {item.time}</p>
+        <p className="text-[11px] text-stone-500">{item.city} · acedeu ao guia {item.time}</p>
       </div>
     </div>
   );

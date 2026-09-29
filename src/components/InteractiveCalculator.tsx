@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Scale, Activity, Flame, Check, Sparkles } from 'lucide-react';
+import { Scale } from 'lucide-react';
 
 export const InteractiveCalculator: React.FC = () => {
   const [weight, setWeight] = useState<number>(8);
@@ -59,15 +59,15 @@ export const InteractiveCalculator: React.FC = () => {
           </div>
           <div>
             <h4 className="font-extrabold text-stone-900 text-base leading-tight">
-              Calculadora de Porção Diária & Gramas
+              Calculadora de Dose Diária & Gramagem
             </h4>
             <p className="text-[11px] text-stone-500">
-              Baseada no NRC & FEDIAF de nutrição canina
+              Diretrizes de referência para alimentação canina equilibrada
             </p>
           </div>
         </div>
         <span className="text-xs font-black text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-md">
-          FERRAMENTA INCLUSA NO GUIA
+          INCLUSA NO GUIA DIGITAL
         </span>
       </div>
 
@@ -105,7 +105,7 @@ export const InteractiveCalculator: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-bold text-stone-800 mb-1.5">
-              2. Castrado ou Inteiro:
+              2. Esterilizado / Castrado:
             </label>
             <div className="flex gap-2">
               <button
@@ -117,7 +117,7 @@ export const InteractiveCalculator: React.FC = () => {
                     : 'bg-stone-50 text-stone-700 border-stone-200 hover:bg-stone-100'
                 }`}
               >
-                Castrado
+                Esterilizado
               </button>
               <button
                 type="button"
@@ -135,16 +135,16 @@ export const InteractiveCalculator: React.FC = () => {
 
           <div>
             <label className="block text-xs font-bold text-stone-800 mb-1.5">
-              3. Nível de Atividade:
+              3. Nível de Atividade Diária:
             </label>
             <select
               value={activity}
               onChange={(e) => setActivity(e.target.value as any)}
               className="w-full py-1.5 px-3 text-xs bg-stone-50 border border-stone-200 rounded-lg text-stone-800 font-medium focus:outline-none focus:border-emerald-500 cursor-pointer"
             >
-              <option value="sedentario">Sedentário (pouco passeio)</option>
-              <option value="moderado">Moderado (passeio diário leve)</option>
-              <option value="ativo">Ativo (+1h de brincadeiras)</option>
+              <option value="sedentario">Sedentário (passeios curtos)</option>
+              <option value="moderado">Moderado (passeio diário habitual)</option>
+              <option value="ativo">Muito Ativo (+1 hora de corrida/brincadeira)</option>
             </select>
           </div>
         </div>
@@ -153,10 +153,10 @@ export const InteractiveCalculator: React.FC = () => {
         <div>
           <div className="flex justify-between items-center mb-1.5">
             <label className="text-xs font-bold text-stone-800">
-              4. Escore Corporal (1 = Muito Magro | 5 = Ideal | 9 = Obeso):
+              4. Condição Corporal (1 = Muito Magro | 5 = Ideal | 9 = Excesso de Peso):
             </label>
             <span className="text-xs font-bold text-stone-700">
-              Nota: <strong>{bodyScore}</strong> ({bodyScore < 4 ? 'Abaixo do peso' : bodyScore <= 6 ? 'Peso Ideal' : 'Sobrepeso'})
+              Avaliação: <strong>{bodyScore}</strong> ({bodyScore < 4 ? 'Abaixo do peso ideal' : bodyScore <= 6 ? 'Peso Equilibrado' : 'Acima do peso'})
             </span>
           </div>
           <div className="grid grid-cols-9 gap-1">
@@ -207,15 +207,15 @@ export const InteractiveCalculator: React.FC = () => {
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
           <div>
             <p className="text-[11px] font-bold text-emerald-800 uppercase tracking-wider">
-              Resultado Personalizado:
+              Recomendação Estimada:
             </p>
             <p className="text-2xl sm:text-3xl font-black text-stone-900">
-              {results.daily}g <span className="text-sm font-semibold text-stone-600">de comida/dia</span>
+              {results.daily}g <span className="text-sm font-semibold text-stone-600">de alimento por dia</span>
             </p>
           </div>
           <div className="bg-white px-3.5 py-2 rounded-xl border border-emerald-200 text-center sm:text-right shadow-xs">
-            <p className="text-[11px] text-stone-500 font-medium">Por Refeição ({mealsPerDay}x ao dia):</p>
-            <p className="text-lg font-black text-emerald-700">{results.meal}g no prato</p>
+            <p className="text-[11px] text-stone-500 font-medium">Por refeição ({mealsPerDay}x ao dia):</p>
+            <p className="text-lg font-black text-emerald-700">{results.meal}g na tigela</p>
           </div>
         </div>
 
@@ -230,13 +230,13 @@ export const InteractiveCalculator: React.FC = () => {
             <p className="font-bold text-stone-900">{results.veg}g</p>
           </div>
           <div className="bg-white/80 p-2 rounded-lg border border-emerald-100">
-            <p className="text-[10px] text-stone-500 font-medium">Carboidratos Saudáveis</p>
+            <p className="text-[10px] text-stone-500 font-medium">Carboidratos Suaves</p>
             <p className="font-bold text-stone-900">{results.carb}g</p>
           </div>
         </div>
 
         <p className="text-[11px] text-stone-500 text-center mt-3">
-          *A versão completa desta calculadora inteligente acompanha o Guia Pet Comilão para você consultar sempre que seu pet mudar de peso!
+          *Esta calculadora interativa integra o Guia Adeus Alergia Canina para que possa ajustar a porção sempre que o peso do cão oscilar.
         </p>
       </div>
 

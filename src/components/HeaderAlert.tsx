@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flame, ShieldCheck, Zap } from 'lucide-react';
+import { Flame, Zap } from 'lucide-react';
 import { PRICE, ORIGINAL_PRICE } from '../constants';
 
 interface HeaderAlertProps {
@@ -15,7 +15,7 @@ export const HeaderAlert: React.FC<HeaderAlertProps> = ({ onGoToCheckout }) => {
             <Flame className="w-3.5 h-3.5 text-orange-600 fill-orange-600" />
           </span>
           <p className="leading-tight">
-            <strong className="text-amber-300 font-semibold">Método Nutrição Caseira Anti-Alergia:</strong> Elimine as coceiras do seu cão de <span className="line-through opacity-80">R$ {ORIGINAL_PRICE}</span> por apenas <strong className="text-amber-300 font-black">R$ {PRICE}</strong> (Acesso Vitalício Imediato!)
+            <strong className="text-amber-300 font-semibold">Método de Nutrição Caseira:</strong> Apoie o alívio da comichão do seu cão de <span className="line-through opacity-80">{ORIGINAL_PRICE}</span> por apenas <strong className="text-amber-300 font-black">{PRICE}</strong> (Acesso Imediato sem Mensalidades!)
           </p>
         </div>
 
@@ -24,7 +24,7 @@ export const HeaderAlert: React.FC<HeaderAlertProps> = ({ onGoToCheckout }) => {
           className="hidden md:inline-flex items-center gap-1.5 bg-amber-400 hover:bg-amber-300 text-stone-950 font-black px-3.5 py-1 rounded-full text-xs shadow-xs transition-all hover:scale-105 active:scale-95 cursor-pointer"
         >
           <Zap className="w-3.5 h-3.5 fill-stone-950" />
-          Garantir por R$ {PRICE}
+          Garantir por {PRICE}
         </button>
       </div>
     </aside>

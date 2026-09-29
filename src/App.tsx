@@ -25,57 +25,50 @@ export default function App() {
     setIsCheckoutOpen(true);
   };
 
-  const handleScrollToOffer = () => {
-    const el = document.getElementById('oferta');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      setIsCheckoutOpen(true);
-    }
-  };
-
   return (
     <div className="min-h-screen bg-[#faf8f5] text-stone-900 flex flex-col font-sans selection:bg-emerald-500 selection:text-white">
-      {/* Top Notification Announcement */}
+      {/* Barra de Aviso Superior */}
       <HeaderAlert onGoToCheckout={handleOpenCheckout} />
 
       <main className="flex-1">
-        {/* 1. Headline / Hero */}
+        {/* 1. Título Principal / Hero */}
         <HeroSection onGoToCheckout={handleOpenCheckout} />
 
-        {/* 2. Conexão */}
+        {/* 2. Conexão e Contexto */}
         <ConnectionSection />
 
-        {/* 3. Pilares (Comida de Verdade, Transição Segura, Lista Semáforo e 100 Receitas) */}
+        {/* 3. Os 4 Pilares da Nutrição Caseira */}
         <PillarsSection />
 
-        {/* 4. Expert (Dra. Fernanda Soares) */}
+        {/* 4. Especialista Responsável (Dra. Sofia Martins) */}
         <ExpertSection />
 
-        {/* 5. Prova Social (Antes/Depois & Depoimentos Reais) */}
+        {/* 5. Testemunhos e Casos Práticos */}
         <SocialProofSection />
 
-        {/* 6. Ancoragem de Valor Refeita & Oferta Direta (R$ 14,90 Pagamento Único) */}
+        {/* 6. Proposta de Valor e Apresentação da Oferta (14,90 €) */}
         <AnchoringSection onDirectCheckout={handleOpenCheckout} />
 
-        {/* 7. Garantia Blindada (7 Dias 100% Incondicional) */}
+        {/* 7. Garantia de Satisfação de 7 Dias */}
         <GuaranteeSection onGoToCheckout={handleOpenCheckout} />
 
-        {/* 8. FAQ (Perguntas Frequentes) */}
+        {/* 8. Perguntas Frequentes */}
         <FaqSection onGoToCheckout={handleOpenCheckout} />
       </main>
 
-      {/* 9. Rodapé */}
+      {/* 9. Rodapé com Informações de Segurança e Isenção de Responsabilidade */}
       <FooterSection />
 
-      {/* Direct Checkout Modal (Pix & Cartão com Liberação Imediata) */}
+      {/* Janela de Pagamento e Envio Imediato */}
       <CheckoutModal
         isOpen={isCheckoutOpen}
         onClose={() => setIsCheckoutOpen(false)}
       />
 
-      {/* Mobile Sticky CTA & Subtle Organic Proof */}
+      {/* Barra de Ação Fixa Inferior */}
       <StickyBottomCta onGoToCheckout={handleOpenCheckout} />
+
+      {/* Notificação Discreta de Atividade Recente */}
       <RecentBuyerToast />
     </div>
   );

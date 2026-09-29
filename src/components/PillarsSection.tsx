@@ -3,13 +3,7 @@ import {
   CheckCircle2, 
   AlertTriangle, 
   XCircle, 
-  Apple, 
-  Flame, 
-  RotateCw, 
-  BookOpen, 
   Check, 
-  Layers,
-  ChevronRight,
   ShieldCheck,
   Search
 } from 'lucide-react';
@@ -20,24 +14,24 @@ export const PillarsSection: React.FC = () => {
   const [searchFood, setSearchFood] = useState('');
 
   const semaforoData = [
-    { name: 'Cenoura cozida ou ralada', status: 'pode', reason: 'Excelente fonte de betacaroteno e fibras digestivas' },
-    { name: 'Abobrinha verde', status: 'pode', reason: 'Baixa caloria, alta hidratação e saciedade gástrica' },
-    { name: 'Ovo de galinha cozido', status: 'pode', reason: 'Proteína de altíssimo valor biológico e colina' },
-    { name: 'Carne moída bovina ou de frango', status: 'pode', reason: 'Base proteica rica em ferro e aminoácidos essenciais' },
-    { name: 'Abóbora cabotiá cozida', status: 'pode', reason: 'Regula o intestino e endurece fezes amolecidas' },
-    { name: 'Sardinha fresca (em água)', status: 'pode', reason: 'Rica em Ômega 3 anti-inflamatório para a pele' },
+    { name: 'Cenoura cozida ou ralada', status: 'pode', reason: 'Excelente fonte de betacaroteno e fibras suaves para a digestão' },
+    { name: 'Curgete (aboborinha)', status: 'pode', reason: 'Baixo teor calórico, elevado teor de água e apoio ao trânsito intestinal' },
+    { name: 'Ovo cozido', status: 'pode', reason: 'Proteína de alto valor biológico com aminoácidos essenciais' },
+    { name: 'Carne picada de vaca ou de frango', status: 'pode', reason: 'Base proteica limpa, rica em ferro e de fácil assimilação' },
+    { name: 'Abóbora-menina cozida', status: 'pode', reason: 'Ajuda a regular o trânsito intestinal e a firmar fezes moles' },
+    { name: 'Sardinha fresca (em água)', status: 'pode', reason: 'Rica em ómega-3 com ação benéfica para a pele e o pelo' },
     
-    { name: 'Fígado bovino / Vísceras', status: 'cuidado', reason: 'Superalimento, mas deve ser dosado em até 5-10% da dieta para não desregular vitamina A' },
-    { name: 'Frutas cítricas (Laranja/Tangerina)', status: 'cuidado', reason: 'Apenas pouca quantidade sem casca e sem sementes, evitar se tiver gastrite' },
-    { name: 'Batata-inglesa', status: 'cuidado', reason: 'Deve sempre ser 100% cozida, nunca crua por conter solanina' },
-    { name: 'Laticínios e queijos brancos', status: 'cuidado', reason: 'Muitos cães adultos têm intolerância à lactose; usar com moderação' },
+    { name: 'Fígado e miudezas', status: 'cuidado', reason: 'Alimento muito rico, mas deve limitar-se a 5-10% da dieta para não sobrecarregar com vitamina A' },
+    { name: 'Frutos cítricos (laranja/tangerina)', status: 'cuidado', reason: 'Apenas em pequenas quantidades, sem casca nem caroços; evitar se o cão tiver sensibilidade gástrica' },
+    { name: 'Batata comum', status: 'cuidado', reason: 'Deve ser sempre totalmente cozida; nunca servir crua por conter solanina' },
+    { name: 'Laticínios e queijos frescos', status: 'cuidado', reason: 'Muitos cães adultos têm intolerância à lactose; utilizar com bastante moderação' },
 
-    { name: 'Cebola e Alho em excesso', status: 'nunca', reason: 'Contém tiossulfato, substância que destrói as hemácias (provoca anemia grave)' },
-    { name: 'Chocolate e Cacau', status: 'nunca', reason: 'A teobromina é altamente tóxica para o coração e sistema nervoso do cão' },
-    { name: 'Uvas frescas e Uvas-passas', status: 'nunca', reason: 'Causa falência renal aguda fulminante mesmo em pequenas porções' },
-    { name: 'Ossos de frango COZIDOS', status: 'nunca', reason: 'O cozimento enrijece os ossos, causando estilhaços que perfuram o esôfago e intestino' },
-    { name: 'Adoçante Xilitol', status: 'nunca', reason: 'Provoca hipoglicemia severa e necrose hepática em minutos' },
-    { name: 'Restos de comida temperada com sal/gordura', status: 'nunca', reason: 'Sobras de mesa com óleo, condimentos e frituras inflamam o pâncreas' },
+    { name: 'Cebola e alho em excesso', status: 'nunca', reason: 'Contêm compostos que podem danificar os glóbulos vermelhos do animal' },
+    { name: 'Chocolate e cacau', status: 'nunca', reason: 'A teobromina é tóxica para o sistema cardiovascular e nervoso dos cães' },
+    { name: 'Uvas frescas e uvas-passas', status: 'nunca', reason: 'Podem desencadear problemas renais graves mesmo em quantidades reduzidas' },
+    { name: 'Ossos de frango COZINHADOS', status: 'nunca', reason: 'O calor torna os ossos quebradiços e lascáveis, com risco de perfuração digestiva' },
+    { name: 'Adoçante Xilitol', status: 'nunca', reason: 'Altamente perigoso; provoca quebra súbita de glicemia e risco hepático rápido' },
+    { name: 'Restos de comida condimentada com gordura e sal', status: 'nunca', reason: 'Sobras de refeições temperadas sobrecarregam o pâncreas e irritam o estômago' },
   ];
 
   const filteredFoods = semaforoData.filter((item) => {
@@ -54,13 +48,13 @@ export const PillarsSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <p className="text-xs uppercase tracking-widest font-extrabold text-emerald-700 mb-2">
-            Método Nutrição Caseira Anti-Alergia
+            Método de Nutrição Caseira
           </p>
           <h2 className="text-3xl sm:text-4xl font-black text-stone-900 tracking-tight leading-tight mb-4">
-            Os 4 Pilares para Desinflamar a Pele e Eliminar as Alergias
+            Os 4 Pilares para Apoiar a Pele e Aliviar a Comichão
           </h2>
           <p className="text-base sm:text-lg text-stone-600">
-            Comida caseira para cães <strong>não é dar restos temperados de mesa</strong>. É uma rotina bioapropriada, hipoalergênica e curativa, pensada para zerar as coceiras do seu filho peludo.
+            Alimentação caseira <strong>não significa dar restos de refeições familiares</strong>. Trata-se de uma rotina equilibrada, biologicamente apropriada e pensada para o bem-estar do seu cão.
           </p>
         </div>
 
@@ -72,13 +66,13 @@ export const PillarsSection: React.FC = () => {
               <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-lg mb-4">
                 01
               </div>
-              <h3 className="font-extrabold text-stone-900 text-lg mb-2">Comida de Verdade</h3>
+              <h3 className="font-extrabold text-stone-900 text-lg mb-2">Comida Fresca e Real</h3>
               <p className="text-sm text-stone-600 leading-relaxed">
-                Ingredientes frescos, preparados com baixo impacto e sem conservantes. O trato digestivo absorve até 90% dos nutrientes.
+                Ingredientes frescos, preparados de forma simples e sem corantes artificiais, facilitando o aproveitamento dos nutrientes.
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-stone-100 text-xs font-semibold text-emerald-700 flex items-center gap-1">
-              <Check className="w-4 h-4" /> Alta digestibilidade
+              <Check className="w-4 h-4" /> Elevada digestibilidade
             </div>
           </div>
 
@@ -87,13 +81,13 @@ export const PillarsSection: React.FC = () => {
               <div className="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-black text-lg mb-4">
                 02
               </div>
-              <h3 className="font-extrabold text-stone-900 text-lg mb-2">Transição Sem Diarreia</h3>
+              <h3 className="font-extrabold text-stone-900 text-lg mb-2">Transição Gradual</h3>
               <p className="text-sm text-stone-600 leading-relaxed">
-                Protocolo gradual em 4 fases (Dias 1 ao 7+). O intestino adapta a flora bacteriana sem vômitos ou desconforto.
+                Protocolo progressivo em 4 fases para permitir a adaptação natural do sistema digestivo, evitando fezes moles ou indisposição.
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-stone-100 text-xs font-semibold text-amber-700 flex items-center gap-1">
-              <Check className="w-4 h-4" /> Adaptação leve
+              <Check className="w-4 h-4" /> Adaptação tranquila
             </div>
           </div>
 
@@ -104,11 +98,11 @@ export const PillarsSection: React.FC = () => {
               </div>
               <h3 className="font-extrabold text-stone-900 text-lg mb-2">Lista Semáforo</h3>
               <p className="text-sm text-stone-600 leading-relaxed">
-                Guia visual prático para a sua geladeira: saiba instantaneamente o que pode, o que exige cuidado e o que é veneno.
+                Um guia visual prático para consultar na cozinha: identifique de imediato o que é benéfico, o que pede cautela e o que é proibido.
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-stone-100 text-xs font-semibold text-rose-700 flex items-center gap-1">
-              <Check className="w-4 h-4" /> Segurança absoluta
+              <Check className="w-4 h-4" /> Clareza e segurança
             </div>
           </div>
 
@@ -117,19 +111,19 @@ export const PillarsSection: React.FC = () => {
               <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-black text-lg mb-4">
                 04
               </div>
-              <h3 className="font-extrabold text-stone-900 text-lg mb-2">100 Receitas Balanceadas</h3>
+              <h3 className="font-extrabold text-stone-900 text-lg mb-2">100 Receitas Equilibradas</h3>
               <p className="text-sm text-stone-600 leading-relaxed">
-                50 receitas cozidas + 50 cruas nutritivas, calculadas para o bem-estar e saúde gastrointestinal do cão.
+                50 receitas cozinhadas e 50 opções cruas, pensadas para apoiar a vitalidade e o conforto alimentar do seu animal.
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-stone-100 text-xs font-semibold text-blue-700 flex items-center gap-1">
-              <Check className="w-4 h-4" /> Economia no mercado
+              <Check className="w-4 h-4" /> Poupança nas compras
             </div>
           </div>
 
         </div>
 
-        {/* Deep Dive Interactive Showcase */}
+        {/* Deep Dive Showcase */}
         <div className="bg-white rounded-3xl p-6 sm:p-10 border border-stone-200 shadow-lg">
           
           {/* Functional Tab Buttons */}
@@ -152,7 +146,7 @@ export const PillarsSection: React.FC = () => {
                   : 'text-stone-600 hover:text-stone-900'
               }`}
             >
-              Lista Semáforo (Pode/Não Pode)
+              Lista Semáforo (Alimentos)
             </button>
             <button
               onClick={() => setActiveTab('receitas')}
@@ -162,7 +156,7 @@ export const PillarsSection: React.FC = () => {
                   : 'text-stone-600 hover:text-stone-900'
               }`}
             >
-              100 Receitas Cozidas & Cruas
+              100 Receitas Cozinhadas & Cruas
             </button>
           </div>
 
@@ -171,13 +165,13 @@ export const PillarsSection: React.FC = () => {
             <div className="max-w-4xl mx-auto space-y-6">
               <div className="text-center mb-6">
                 <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-                  Fiel ao Guia Físico Mostrado no Vídeo
+                  Protocolo Prático de Adaptação
                 </span>
                 <h3 className="text-2xl font-black text-stone-900 mt-2">
-                  Como fazer a transição segura para evitar qualquer mal-estar
+                  Como fazer a transição gradual para respeitar o aparelho digestivo
                 </h3>
                 <p className="text-sm text-stone-600 max-w-xl mx-auto mt-1">
-                  O sistema digestivo do cão acostumado à ração precisa de alguns dias para acordar as enzimas naturais. Siga este cronograma comprovado:
+                  O organismo do cão habituado a ração seca beneficia de alguns dias para ativar o equilíbrio enzimático. Acompanhe as 4 fases sugeridas:
                 </p>
               </div>
 
@@ -198,11 +192,11 @@ export const PillarsSection: React.FC = () => {
                     </div>
                     <div className="flex justify-between text-[11px] font-bold">
                       <span className="text-stone-600">75% Ração</span>
-                      <span className="text-emerald-700">25% Comida Natural</span>
+                      <span className="text-emerald-700">25% Comida Caseira</span>
                     </div>
                   </div>
                   <p className="text-xs text-stone-600 leading-snug">
-                    O cão começa a sentir o aroma delicioso da carne e dos legumes misturados sem estranhar.
+                    O cão começa a contactar com o aroma agradável dos alimentos frescos sem estranhar a novidade na tigela.
                   </p>
                 </div>
 
@@ -212,7 +206,7 @@ export const PillarsSection: React.FC = () => {
                     <span className="text-xs font-black text-emerald-800 bg-emerald-200/80 px-2.5 py-0.5 rounded-md">
                       Dias 3 e 4
                     </span>
-                    <span className="text-xs font-semibold text-stone-500">Meio a Meio</span>
+                    <span className="text-xs font-semibold text-stone-500">Equilíbrio</span>
                   </div>
                   <div className="space-y-2 mb-3">
                     <div className="w-full bg-stone-200 rounded-full h-3 overflow-hidden flex">
@@ -221,11 +215,11 @@ export const PillarsSection: React.FC = () => {
                     </div>
                     <div className="flex justify-between text-[11px] font-bold">
                       <span className="text-stone-600">50% Ração</span>
-                      <span className="text-emerald-700">50% Comida Natural</span>
+                      <span className="text-emerald-700">50% Comida Caseira</span>
                     </div>
                   </div>
                   <p className="text-xs text-stone-600 leading-snug">
-                    A microbiota intestinal se multiplica, as fezes começam a diminuir de volume e o cheiro fica mais leve.
+                    O trato intestinal ajusta-se naturalmente e o volume e o odor das fezes começam habitualmente a reduzir.
                   </p>
                 </div>
 
@@ -235,7 +229,7 @@ export const PillarsSection: React.FC = () => {
                     <span className="text-xs font-black text-emerald-800 bg-emerald-200 px-2.5 py-0.5 rounded-md">
                       Dias 5 e 6
                     </span>
-                    <span className="text-xs font-semibold text-stone-500">Quase Lá</span>
+                    <span className="text-xs font-semibold text-stone-500">Quase Concluído</span>
                   </div>
                   <div className="space-y-2 mb-3">
                     <div className="w-full bg-stone-200 rounded-full h-3 overflow-hidden flex">
@@ -244,11 +238,11 @@ export const PillarsSection: React.FC = () => {
                     </div>
                     <div className="flex justify-between text-[11px] font-bold">
                       <span className="text-stone-600">25% Ração</span>
-                      <span className="text-emerald-700">75% Comida Natural</span>
+                      <span className="text-emerald-700">75% Comida Caseira</span>
                     </div>
                   </div>
                   <p className="text-xs text-stone-600 leading-snug">
-                    Ele já espera ansioso pelo prato! A pele começa a clarear e as coceiras noturnas diminuem drasticamente.
+                    O animal come com apetite renovado e a sensação de comichão pode começar a diminuir de forma visível.
                   </p>
                 </div>
 
@@ -258,7 +252,7 @@ export const PillarsSection: React.FC = () => {
                     <span className="text-xs font-black text-emerald-950 bg-amber-300 px-2.5 py-0.5 rounded-md">
                       Dia 7 em diante
                     </span>
-                    <span className="text-xs font-semibold text-emerald-100">100% Livre</span>
+                    <span className="text-xs font-semibold text-emerald-100">100% Caseiro</span>
                   </div>
                   <div className="space-y-2 mb-3">
                     <div className="w-full bg-emerald-800 rounded-full h-3 overflow-hidden flex">
@@ -270,7 +264,7 @@ export const PillarsSection: React.FC = () => {
                     </div>
                   </div>
                   <p className="text-xs text-emerald-50 leading-snug">
-                    Seu cão atinge o ápice de vitalidade, pelo acetinado, hálito agradável e noites inteiras dormindo como um anjo.
+                    Rotina estabelecida com vitalidade, pelo mais brilhante, hálito agradável e noites descansadas para todos.
                   </p>
                 </div>
 
@@ -279,7 +273,7 @@ export const PillarsSection: React.FC = () => {
               <div className="p-4 bg-stone-50 rounded-xl border border-stone-200 text-xs text-stone-600 flex items-center gap-3">
                 <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0" />
                 <span>
-                  <strong>Dica da Dra. Fernanda:</strong> Cães mais sensíveis ou idosos podem estender cada fase para 3 dias. O Guia detalha ajustes individuais para cada caso!
+                  <strong>Nota orientativa:</strong> Cães mais velhos ou com estômago sensível podem prolongar cada fase durante 3 dias. O guia explica como adaptar ao ritmo de cada animal!
                 </span>
               </div>
             </div>
@@ -294,7 +288,7 @@ export const PillarsSection: React.FC = () => {
                     O que PODE, o que exige CUIDADO e o que NUNCA dar
                   </h3>
                   <p className="text-xs text-stone-500">
-                    Consulte os alimentos antes de preparar o pratinho
+                    Consulte os alimentos antes de preparar a refeição
                   </p>
                 </div>
 
@@ -304,7 +298,7 @@ export const PillarsSection: React.FC = () => {
                     <Search className="w-4 h-4 text-stone-400 absolute left-3 top-1/2 -translate-y-1/2" />
                     <input
                       type="text"
-                      placeholder="Buscar alimento..."
+                      placeholder="Procurar alimento..."
                       value={searchFood}
                       onChange={(e) => setSearchFood(e.target.value)}
                       className="w-full pl-9 pr-3 py-1.5 text-xs bg-stone-100 border border-stone-200 rounded-lg focus:outline-none focus:border-emerald-500"
@@ -387,7 +381,7 @@ export const PillarsSection: React.FC = () => {
               </div>
 
               <p className="text-center text-xs text-stone-500">
-                O Guia impresso/PDF inclui mais de 80 alimentos listados para consulta instantânea na geladeira.
+                O guia em formato digital reúne mais de 80 ingredientes para consulta rápida no dia a dia.
               </p>
             </div>
           )}
@@ -397,13 +391,13 @@ export const PillarsSection: React.FC = () => {
             <div className="max-w-4xl mx-auto space-y-6">
               <div className="text-center mb-6">
                 <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-                  Variedade Completa & Econômica
+                  Variedade e Praticidade
                 </span>
                 <h3 className="text-2xl font-black text-stone-900 mt-2">
-                  100 Receitas Testadas: 50 Cozidas + 50 Cruas
+                  100 Receitas Estruturadas: 50 Cozinhadas + 50 Cruas
                 </h3>
                 <p className="text-sm text-stone-600 max-w-xl mx-auto mt-1">
-                  Cardápios acessíveis com ingredientes que você compra na feira ou no açougue perto de casa, sem gastar fortunas.
+                  Ementas acessíveis preparadas com ingredientes que encontra facilmente no supermercado ou no talho local.
                 </p>
               </div>
 
@@ -413,27 +407,27 @@ export const PillarsSection: React.FC = () => {
                     50
                   </div>
                   <h4 className="font-extrabold text-stone-900 text-lg mb-2">
-                    50 Receitas Cozidas para Cães
+                    50 Receitas Cozinhadas
                   </h4>
                   <p className="text-xs text-stone-600 mb-4 leading-relaxed">
-                    Perfeito para quem está começando. A cocção branda potencializa o aroma, facilita a digestão de cães com gastrite ou paladar exigente e mata qualquer bactéria indesejada.
+                    Opção ideal para iniciar. A cozedura suave realça os aromas, facilita a digestão de cães de paladar exigente e confere grande segurança microbiológica.
                   </p>
                   <ul className="text-xs text-stone-700 space-y-2">
                     <li className="flex items-center gap-2">
                       <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                      Peru com Lentilha e Abobrinha
+                      Peru com Lentilhas e Curgete
                     </li>
                     <li className="flex items-center gap-2">
                       <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                      Patinho Moído com Purê de Abóbora Cabotiá
+                      Carne de Vaca Picada com Puré de Abóbora
                     </li>
                     <li className="flex items-center gap-2">
                       <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                      Frango Desfiado com Cenoura e Ervilha Fresca
+                      Frango Desfiado com Cenoura e Ervilhas
                     </li>
                     <li className="flex items-center gap-2">
                       <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                      Caldo de Ossos Gelatinoso para Fortalecer Articulações
+                      Caldo Rico de Ossos para Apoio Articular
                     </li>
                   </ul>
                 </div>
@@ -443,27 +437,27 @@ export const PillarsSection: React.FC = () => {
                     50
                   </div>
                   <h4 className="font-extrabold text-stone-900 text-lg mb-2">
-                    50 Receitas Cruas (Com Osso & Sem Osso)
+                    50 Receitas Cruas Biologicamente Apropriadas
                   </h4>
                   <p className="text-xs text-stone-600 mb-4 leading-relaxed">
-                    A dieta biologicamente apropriada (BARF) que preserva 100% das enzimas e vitaminas ativas. Inclui regras de congelamento profilático para segurança sanitária total.
+                    Alimentação natural crua com orientações rigorosas de congelação profilática no congelador doméstico para segurança alimentar.
                   </p>
                   <ul className="text-xs text-stone-700 space-y-2">
                     <li className="flex items-center gap-2">
                       <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                      Moela e Fígado com Mix de Folhas Verdes
+                      Moelas e Fígado com Mistura de Folhas Verdes
                     </li>
                     <li className="flex items-center gap-2">
                       <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                      Pescoço e Dorso de Frango Cru (Limpeza natural dos dentes)
+                      Pescoço e Dorso de Frango Cru (Higiene mecânica dos dentes)
                     </li>
                     <li className="flex items-center gap-2">
                       <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                      Mix de Peixe com Ovo Caipira e Espinafre
+                      Mistura de Peixe com Ovo Cozido e Espinafres
                     </li>
                     <li className="flex items-center gap-2">
                       <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                      Técnica de Congelamento Profilático de 72 horas
+                      Método de Congelação Profilática de 72 horas
                     </li>
                   </ul>
                 </div>
