@@ -12,7 +12,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onGoToCheckout }) => {
   const faqs = [
     {
       q: 'Como recebo o acesso após a confirmação do pagamento?',
-      a: 'O envio é imediato e automático! Logo que o pagamento seja processado, recebe no seu e-mail a ligação exclusiva para descarregar o Guia Adeus Alergia Canina em formato digital (ficheiro PDF de leitura fácil em qualquer telemóvel, tablet ou computador), com as 100 receitas, a lista semáforo e o acesso à calculadora.',
+      a: 'O envio é imediato e automático! Logo que o pagamento seja processado, recebe no seu e-mail a ligação exclusiva para descarregar o Método Pele Tranquila Canina em formato digital (ficheiro PDF de leitura fácil em qualquer telemóvel, tablet ou computador), com todas as 100 receitas e a lista semáforo dos alimentos.',
     },
     {
       q: 'A alimentação caseira não fica mais cara do que a ração seca?',
@@ -28,11 +28,11 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onGoToCheckout }) => {
     },
     {
       q: 'Cães seniores, cães jovens ou animais esterilizados podem beneficiar da alimentação natural?',
-      a: 'Sim, desde que a dose calórica e os nutrientes sejam devidamente equilibrados. O guia e a calculadora incluem orientações de ajuste para animais esterilizados com tendência a ganhar peso, bem como para cães com ritmo de vida mais calmo ou animais jovens.',
+      a: 'Sim, desde que a dose calórica e os nutrientes sejam devidamente equilibrados. O guia inclui orientações claras de ajuste para animais esterilizados com tendência a ganhar peso, bem como para cães com ritmo de vida mais calmo ou animais jovens.',
     },
     {
-      q: 'Como sei a gramagem exata para o peso do meu cão?',
-      a: 'Tem acesso à nossa Calculadora de Dose Diária. Basta introduzir o peso atual, se o cão está esterilizado, a condição corporal e o nível de atividade. A ferramenta indica de imediato quantas gramas deve colocar na tigela em cada refeição.',
+      q: 'Como sei a porção adequada para o porte do meu cão?',
+      a: 'O guia traz tabelas práticas de proporções diárias de acordo com o porte e o peso do cão. Fica a saber com precisão as quantidades recomendadas de proteínas, legumes e fibras para compor cada refeição.',
     },
     {
       q: 'O meu cão sempre comeu ração a vida toda. A transição pode causar diarreia?',

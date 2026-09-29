@@ -12,9 +12,9 @@ export const ASSETS = {
   transformation,
 };
 
-export const CHECKOUT_URL = '#checkout';
+export const CHECKOUT_URL = '#checkout-box';
 export const PRICE = '14,90 €';
 export const PRICE_NUMBER = '14,90';
 export const ORIGINAL_PRICE = '49,00 €';
-export const PRODUCT_NAME = 'Adeus Alergia Canina: Método de Nutrição Caseira';
-export const SHORT_PRODUCT_NAME = 'Adeus Alergia Canina';
+export const PRODUCT_NAME = 'Método Pele Tranquila Canina';
+export const SHORT_PRODUCT_NAME = 'Método Pele Tranquila Canina';

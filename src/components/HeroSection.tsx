@@ -87,11 +87,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout }) => {
             </div>
 
             <h2 className="text-2xl sm:text-3xl font-black text-stone-900 tracking-tight leading-snug mb-3">
-              Adeus Alergia Canina: o guia prático para ajudar a aliviar o desconforto do seu cão
+              Método Pele Tranquila Canina: o guia prático para ajudar a aliviar o desconforto do seu cão
             </h2>
 
             <p className="text-sm sm:text-base text-stone-600 mb-5 leading-relaxed">
-              Tenha acesso ao método prático da <strong>Dra. Sofia Martins</strong> com orientações de nutrição caseira hipoalergénica, 100 receitas fáceis, lista semáforo dos alimentos e calculadora automática de gramagem.
+              Tenha acesso ao método prático da <strong>Dra. Sofia Martins</strong> com orientações de nutrição caseira hipoalergénica, 100 receitas fáceis e a lista semáforo dos alimentos.
             </p>
 
             {/* Benefit Checkmarks */}
@@ -112,7 +112,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout }) => {
                 <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
                   <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                 </span>
-                <span><strong>Calculadora de Gramas:</strong> cálculo da dose diária de acordo com o peso e nível de atividade</span>
+                <span><strong>Alimentação Natural Equilibrada:</strong> proporções práticas de carnes, legumes e fibras</span>
               </li>
             </ul>
 

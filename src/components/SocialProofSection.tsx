@@ -123,7 +123,7 @@ export const SocialProofSection: React.FC = () => {
             </div>
             <div>
               <p className="text-sm sm:text-base font-medium italic text-emerald-50 leading-relaxed mb-3">
-                &ldquo;Depois de semanas complicadas, foi um alívio vê-lo dormir a noite inteira sem passar horas a lamber as patas. O método Adeus Alergia Canina trouxe-nos a orientação simples de que precisávamos.&rdquo;
+                &ldquo;Depois de semanas complicadas, foi um alívio vê-lo dormir a noite inteira sem passar horas a lamber as patas. O Método Pele Tranquila Canina trouxe-nos a orientação simples de que precisávamos.&rdquo;
               </p>
               <p className="text-xs font-bold text-amber-300">
                 — Carla Silveira, tutora do Pipoca (Beagle de 5 anos)

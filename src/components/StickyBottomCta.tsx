@@ -30,7 +30,7 @@ export const StickyBottomCta: React.FC<StickyBottomCtaProps> = ({ onGoToCheckout
         
         <div className="hidden sm:block">
           <p className="text-xs font-bold text-stone-900 leading-tight">
-            Adeus Alergia Canina: Método de Nutrição Caseira
+            Método Pele Tranquila Canina
           </p>
           <p className="text-[11px] text-emerald-700 font-semibold">
             100 Receitas + Lista Semáforo por apenas {PRICE} (Acesso Imediato)

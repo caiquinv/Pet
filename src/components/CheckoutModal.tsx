@@ -40,7 +40,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                 PAGAMENTO 100% SEGURO
               </span>
               <h3 className="text-2xl font-black text-stone-900 mt-2">
-                Adeus Alergia Canina
+                Método Pele Tranquila Canina
               </h3>
               <p className="text-xs text-stone-600 mt-1">
                 Acesso vitalício ao Método de Nutrição Caseira por apenas <strong className="text-emerald-700 font-extrabold">{PRICE}</strong>
@@ -209,7 +209,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                 className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-md cursor-pointer"
               >
                 <Download className="w-4 h-4" />
-                Descarregar Guia Adeus Alergia Canina (PDF)
+                Descarregar Método Pele Tranquila Canina (PDF)
               </a>
 
               <button

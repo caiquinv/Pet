@@ -18,7 +18,7 @@ export const FooterSection: React.FC = () => {
                 🐾
               </span>
               <span className="font-extrabold text-lg text-white font-heading tracking-tight">
-                Adeus Alergia Canina
+                Método Pele Tranquila Canina
               </span>
             </div>
             
@@ -82,10 +82,10 @@ export const FooterSection: React.FC = () => {
         {/* Disclaimer Warning */}
         <div className="pt-8 pb-4 text-[11px] text-stone-500 leading-relaxed max-w-4xl mx-auto text-center space-y-2">
           <p>
-            <strong>Nota Responsável de Saúde Animal:</strong> Os conteúdos apresentados no método Adeus Alergia Canina têm finalidade puramente educativa e de apoio à alimentação equilibrada do cão. Não constituem consulta médica veterinária nem substituem o diagnóstico, acompanhamento ou prescrição de um médico veterinário, especialmente em casos de doenças crónicas, infeções bacterianas graves ou alterações renais pré-existentes.
+            <strong>Nota Responsável de Saúde Animal:</strong> Os conteúdos apresentados no Método Pele Tranquila Canina têm finalidade puramente educativa e de apoio à alimentação equilibrada do cão. Não constituem consulta médica veterinária nem substituem o diagnóstico, acompanhamento ou prescrição de um médico veterinário, especialmente em casos de doenças crónicas, infeções bacterianas graves ou alterações renais pré-existentes.
           </p>
           <p>
-            © {new Date().getFullYear()} Adeus Alergia Canina: Método de Nutrição Caseira · Todos os direitos reservados.
+            © {new Date().getFullYear()} Método Pele Tranquila Canina: Método de Nutrição Caseira · Todos os direitos reservados.
           </p>
         </div>
 
@@ -105,7 +105,7 @@ export const FooterSection: React.FC = () => {
             {modalType === 'termos' ? (
               <div className="space-y-3 text-xs leading-relaxed">
                 <h3 className="text-lg font-black text-stone-900 mb-2">Termos de Utilização</h3>
-                <p>Ao adquirir o Guia Adeus Alergia Canina, é concedida uma licença individual, pessoal e intransferível de consulta do ficheiro digital e dos materiais complementares.</p>
+                <p>Ao adquirir o Método Pele Tranquila Canina, é concedida uma licença individual, pessoal e intransferível de consulta do ficheiro digital e dos materiais complementares.</p>
                 <p>O valor de {PRICE} corresponde a um pagamento único, garantindo acesso continuado ao material sem qualquer subscrição ou mensalidade adicional.</p>
               </div>
             ) : (

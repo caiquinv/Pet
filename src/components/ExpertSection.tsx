@@ -40,7 +40,7 @@ export const ExpertSection: React.FC = () => {
           <div className="lg:col-span-7 space-y-5">
             <div className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
               <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-              SOBRE O MÉTODO ADEUS ALERGIA CANINA
+              SOBRE O MÉTODO PELE TRANQUILA CANINA
             </div>
 
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-stone-900 tracking-tight leading-tight">
@@ -60,7 +60,7 @@ export const ExpertSection: React.FC = () => {
                 O Propósito da Alimentação Caseira
               </p>
               <p className="text-xs sm:text-sm text-stone-700">
-                &ldquo;Estruturei o método <strong>Adeus Alergia Canina</strong> para que qualquer tutor consiga preparar refeições frescas, simples e equilibradas em sua casa. Ajudar a restaurar o equilíbrio do organismo através de ingredientes naturais e ver o alívio na vida do animal é a maior satisfação do meu trabalho.&rdquo;
+                &ldquo;Estruturei o <strong>Método Pele Tranquila Canina</strong> para que qualquer tutor consiga preparar refeições frescas, simples e equilibradas em sua casa. Ajudar a restaurar o equilíbrio do organismo através de ingredientes naturais e ver o alívio na vida do animal é a maior satisfação do meu trabalho.&rdquo;
               </p>
             </div>
 

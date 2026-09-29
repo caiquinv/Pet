@@ -26,7 +26,7 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ onGoToChecko
           </h2>
 
           <p className="text-stone-700 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Adquira o método <strong>Adeus Alergia Canina</strong> hoje, consulte as 100 receitas, utilize a calculadora de dose e prepare as primeiras refeições frescas para o seu cão com total tranquilidade.
+            Adquira o <strong>Método Pele Tranquila Canina</strong> hoje, consulte as 100 receitas e prepare as primeiras refeições frescas para o seu cão com total tranquilidade.
           </p>
 
           {/* Guarantee Highlights */}

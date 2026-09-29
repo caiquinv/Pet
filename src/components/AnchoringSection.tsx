@@ -175,7 +175,7 @@ export const AnchoringSection: React.FC<AnchoringSectionProps> = ({ onDirectChec
               OFERTA DE LANÇAMENTO EM PORTUGAL
             </span>
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-stone-900 tracking-tight leading-tight">
-              Aceda Já ao Método Adeus Alergia Canina
+              Aceda Já ao Método Pele Tranquila Canina
             </h3>
             <p className="text-xs sm:text-sm text-stone-500 mt-2">
               O guia prático de nutrição caseira para favorecer o equilíbrio digestivo, apoiar a pele e proporcionar mais conforto ao seu cão.
@@ -203,7 +203,7 @@ export const AnchoringSection: React.FC<AnchoringSectionProps> = ({ onDirectChec
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-stone-700">
               <div className="flex items-start gap-2">
                 <Check className="w-4 h-4 text-emerald-600 shrink-0 stroke-[3] mt-0.5" />
-                <span><strong>Guia Adeus Alergia Canina:</strong> O passo a passo completo da nutrição caseira</span>
+                <span><strong>Método Pele Tranquila Canina:</strong> O passo a passo completo da nutrição caseira</span>
               </div>
               <div className="flex items-start gap-2">
                 <Check className="w-4 h-4 text-emerald-600 shrink-0 stroke-[3] mt-0.5" />
@@ -223,7 +223,7 @@ export const AnchoringSection: React.FC<AnchoringSectionProps> = ({ onDirectChec
               </div>
               <div className="flex items-start gap-2">
                 <Check className="w-4 h-4 text-emerald-600 shrink-0 stroke-[3] mt-0.5" />
-                <span><strong>Calculadora de Porção Diária:</strong> Dose exata em gramas ajustada ao peso e rotina</span>
+                <span><strong>Guia de Proporções Caseiras:</strong> Equilíbrio simples de carnes, legumes e fibras</span>
               </div>
             </div>
           </div>
@@ -241,7 +241,7 @@ export const AnchoringSection: React.FC<AnchoringSectionProps> = ({ onDirectChec
                   Disponibilização Imediata
                 </span>
                 <span className="block text-base sm:text-lg font-black leading-tight">
-                  SIM! QUERO O MÉTODO ADEUS ALERGIA CANINA POR {PRICE}
+                  SIM! QUERO O MÉTODO PELE TRANQUILA CANINA POR {PRICE}
                 </span>
               </div>
             </button>
