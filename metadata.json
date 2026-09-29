@@ -1,0 +1,6 @@
+{
+  "name": "Guia Pet Comilão - Alimentação Natural para Cães",
+  "description": "Como iniciar na alimentação natural com segurança, economia e saúde. 100 receitas, lista semáforo e calculadora de porção por apenas R$ 14,90.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
