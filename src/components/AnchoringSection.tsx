@@ -8,7 +8,7 @@ import {
   CreditCard, 
   X
 } from 'lucide-react';
-import { PRICE, ORIGINAL_PRICE } from '../constants';
+import { PRICE, ORIGINAL_PRICE, CHECKOUT_URL } from '../constants';
 
 interface AnchoringSectionProps {
   onDirectCheckout: () => void;
@@ -231,9 +231,15 @@ export const AnchoringSection: React.FC<AnchoringSectionProps> = ({ onDirectChec
           {/* CALL TO ACTION BOTÃO PRINCIPAL */}
           <div className="max-w-xl mx-auto space-y-4">
             
-            <button
-              onClick={onDirectCheckout}
-              className="w-full group bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-black text-base sm:text-lg py-4 px-6 rounded-2xl shadow-xl shadow-emerald-700/30 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-3 cursor-pointer"
+            <a
+              href={CHECKOUT_URL}
+              onClick={(e) => {
+                if (onDirectCheckout) {
+                  // Track or trigger callback without preventing navigation if desired, or direct link
+                  onDirectCheckout();
+                }
+              }}
+              className="w-full group bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-black text-base sm:text-lg py-4 px-6 rounded-2xl shadow-xl shadow-emerald-700/30 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-3 cursor-pointer no-underline"
             >
               <Zap className="w-6 h-6 fill-white text-emerald-600 shrink-0" />
               <div className="text-left">
@@ -244,7 +250,7 @@ export const AnchoringSection: React.FC<AnchoringSectionProps> = ({ onDirectChec
                   SIM! QUERO O MÉTODO PELE TRANQUILA CANINA POR {PRICE}
                 </span>
               </div>
-            </button>
+            </a>
 
             {/* Selos de Segurança e Confiança */}
             <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-stone-500 pt-2">

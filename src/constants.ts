@@ -12,7 +12,7 @@ export const ASSETS = {
   transformation,
 };
 
-export const CHECKOUT_URL = '#checkout-box';
+export const CHECKOUT_URL = 'https://pay.hotmart.com/L107826631E';
 export const PRICE = '14,90 €';
 export const PRICE_NUMBER = '14,90';
 export const ORIGINAL_PRICE = '49,00 €';

@@ -29,9 +29,15 @@ export default function App() {
     }
   };
 
-  // Only the main offer box button opens the real checkout modal
+  // Direct checkout opens the Hotmart checkout page
   const handleOpenCheckout = () => {
-    setIsCheckoutOpen(true);
+    // If needed can track event or analytics
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'InitiateCheckout', {
+        value: 14.90,
+        currency: 'EUR'
+      });
+    }
   };
 
   return (
