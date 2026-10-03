@@ -80,7 +80,7 @@ export const FooterSection: React.FC = () => {
         </div>
 
         {/* Disclaimer Warning */}
-        <div className="pt-8 pb-4 text-[11px] text-stone-500 leading-relaxed max-w-4xl mx-auto text-center space-y-2">
+        <div className="pt-8 pb-4 text-[11px] text-stone-400 leading-relaxed max-w-4xl mx-auto text-center space-y-2">
           <p>
             <strong>Nota Responsável de Saúde Animal:</strong> Os conteúdos apresentados no Método Pele Tranquila Canina têm finalidade puramente educativa e de apoio à alimentação equilibrada do cão. Não constituem consulta médica veterinária nem substituem o diagnóstico, acompanhamento ou prescrição de um médico veterinário, especialmente em casos de doenças crónicas, infeções bacterianas graves ou alterações renais pré-existentes.
           </p>

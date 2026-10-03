@@ -50,8 +50,12 @@ export const SocialProofSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
             <div className="md:col-span-6 rounded-2xl overflow-hidden shadow-inner border border-stone-100">
               <img
-                src={ASSETS.transformation}
+                src="/dog-results-happy.webp"
                 alt="Exemplo de cão com pelagem recuperada e ar saudável"
+                width={800}
+                height={597}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-64 sm:h-72 object-cover object-center"
               />
             </div>

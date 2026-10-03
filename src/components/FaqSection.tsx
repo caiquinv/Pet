@@ -76,7 +76,9 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onGoToCheckout }) => {
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
                   className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-stone-900 text-sm sm:text-base hover:text-emerald-700 transition-colors cursor-pointer"
                 >
-                  <span>{faq.q}</span>
+                  <h3 className="font-bold text-stone-900 text-sm sm:text-base hover:text-emerald-700 transition-colors m-0 p-0 inline">
+                    {faq.q}
+                  </h3>
                   <ChevronDown
                     className={`w-5 h-5 text-stone-400 shrink-0 transition-transform duration-200 ${
                       isOpen ? 'rotate-180 text-emerald-600' : ''

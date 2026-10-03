@@ -177,14 +177,14 @@ export const AnchoringSection: React.FC<AnchoringSectionProps> = ({ onDirectChec
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-stone-900 tracking-tight leading-tight">
               Aceda Já ao Método Pele Tranquila Canina
             </h3>
-            <p className="text-xs sm:text-sm text-stone-500 mt-2">
+            <p className="text-xs sm:text-sm text-stone-600 mt-2">
               O guia prático de nutrição caseira para favorecer o equilíbrio digestivo, apoiar a pele e proporcionar mais conforto ao seu cão.
             </p>
           </div>
 
           {/* Pricing Highlight */}
           <div className="flex flex-col items-center justify-center text-center my-6">
-            <p className="text-sm font-bold text-stone-400 line-through mb-1">
+            <p className="text-sm font-bold text-stone-500 line-through mb-1">
               De {ORIGINAL_PRICE} por apenas
             </p>
             <div className="flex items-baseline gap-1 text-emerald-700">

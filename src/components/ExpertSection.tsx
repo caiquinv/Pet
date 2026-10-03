@@ -14,8 +14,12 @@ export const ExpertSection: React.FC = () => {
             <div className="relative mx-auto max-w-sm lg:max-w-none">
               <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-emerald-100 relative group">
                 <img
-                  src={ASSETS.vetSofia}
+                  src="/vet-sofia-martins.webp"
                   alt="Dra. Sofia Martins Médica Veterinária"
+                  width={600}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-auto object-cover object-center aspect-square"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent"></div>

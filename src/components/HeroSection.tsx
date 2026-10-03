@@ -50,8 +50,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout }) => {
           <div className="lg:col-span-6 relative flex flex-col items-center">
             <div className="relative w-full rounded-2xl overflow-hidden shadow-lg border border-stone-100 group">
               <img
-                src={ASSETS.heroFood}
+                src="/hero-dog-food.webp"
                 alt="Alimentação natural e saudável para cães preparada com ingredientes frescos"
+                width={900}
+                height={672}
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-64 sm:h-72 object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent flex flex-col justify-end p-4 text-white">
@@ -119,7 +123,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout }) => {
             {/* Price Preview & Direct CTA Button */}
             <div className="space-y-3">
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-xs text-stone-400 line-through">De {ORIGINAL_PRICE}</span>
+                <span className="text-xs text-stone-500 line-through">De {ORIGINAL_PRICE}</span>
                 <span className="text-xs font-bold text-emerald-700 uppercase">Por apenas</span>
                 <span className="text-2xl font-black text-emerald-600">{PRICE}</span>
                 <span className="text-[11px] text-stone-500 font-medium">(Pagamento único)</span>

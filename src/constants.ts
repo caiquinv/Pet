@@ -1,15 +1,10 @@
-import heroFood from './assets/images/hero_dog_food_1790642252873.jpg';
-import guideMockup from './assets/images/guide_bundle_mockup_1790642284159.jpg';
-import vetSofia from './assets/images/vet_sofia_martins_1790647079886.jpg';
-import transformation from './assets/images/dog_results_happy_1790642492664.jpg';
-
 export const ASSETS = {
-  heroFood,
-  guideMockup,
-  vetSofia,
-  vetFernanda: vetSofia,
-  vetMariana: vetSofia,
-  transformation,
+  heroFood: '/hero-dog-food.webp',
+  guideMockup: '/guide-bundle-mockup.webp',
+  vetSofia: '/vet-sofia-martins.webp',
+  vetFernanda: '/vet-sofia-martins.webp',
+  vetMariana: '/vet-sofia-martins.webp',
+  transformation: '/dog-results-happy.webp',
 };
 
 export const CHECKOUT_URL = 'https://pay.hotmart.com/L107826631E';
