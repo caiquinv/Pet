@@ -9,7 +9,6 @@ import { HeroSection } from './components/HeroSection';
 import { trackInitiateCheckout, trackViewContent } from './utils/tracker';
 
 // Code splitting: seções abaixo da dobra carregadas assincronamente para reduzir JavaScript inicial
-const ConnectionSection = lazy(() => import('./components/ConnectionSection').then(m => ({ default: m.ConnectionSection })));
 const PillarsSection = lazy(() => import('./components/PillarsSection').then(m => ({ default: m.PillarsSection })));
 const ExpertSection = lazy(() => import('./components/ExpertSection').then(m => ({ default: m.ExpertSection })));
 const SocialProofSection = lazy(() => import('./components/SocialProofSection').then(m => ({ default: m.SocialProofSection })));
@@ -61,13 +60,10 @@ export default function App() {
 
         {/* Componentes abaixo da dobra com code-splitting */}
         <Suspense fallback={null}>
-          {/* 2. Conexão e Contexto */}
-          <ConnectionSection />
-
-          {/* 3. Os 4 Pilares da Nutrição Caseira */}
+          {/* 2. Os 4 Pilares da Nutrição Caseira */}
           <PillarsSection />
 
-          {/* 4. Especialista Responsável (Dra. Sofia Martins) */}
+          {/* 3. Especialista Responsável (Dra. Sofia Martins) */}
           <ExpertSection />
 
           {/* 5. Educação Nutricional e Benefícios Comprovados */}

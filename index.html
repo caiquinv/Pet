@@ -18,38 +18,52 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap"></noscript>
     <script>
       (function() {
-        // 1. Silencia logs internos do rastreador ("buttons" e "Tracker.inited?")
-        var _log = console.log;
-        console.log = function() {
-          if (arguments.length > 0) {
-            var msg = String(arguments[0]);
-            if (
-              msg === "buttons" ||
-              msg.indexOf("buttons") === 0 ||
-              msg.indexOf("Tracker.inited?") !== -1 ||
-              msg.indexOf("button clicked pixel") !== -1 ||
-              msg.indexOf("tracking ic with") !== -1 ||
-              msg.indexOf("canSend") !== -1 ||
-              msg.indexOf("Tracker Meta version") !== -1
-            ) {
-              return;
+        // 1. Limpeza preventiva de chaves corrompidas no localStorage
+        try {
+          if (typeof window !== 'undefined' && window.localStorage) {
+            for (var k in localStorage) {
+              var item = localStorage.getItem(k);
+              if (item === "undefined" || item === "null" || item === "") {
+                localStorage.removeItem(k);
+              }
             }
-          }
-          _log.apply(console, arguments);
-        };
 
-        // 2. Proteção global para fetch com .catch(() => {}) prevenindo "Failed to fetch" de apis externas (ipify/ipapi)
-        var _fetch = window.fetch;
-        if (_fetch) {
-          window.fetch = function() {
-            return _fetch.apply(this, arguments).catch(function(err) {
-              return new Response(JSON.stringify({}), {
-                status: 200,
-                headers: { 'Content-Type': 'application/json' }
-              });
-            });
-          };
-        }
+            // Intercepta getItem e setItem para nunca retornar nem armazenar a string "undefined"
+            var _getItem = localStorage.getItem.bind(localStorage);
+            localStorage.getItem = function(key) {
+              var val = _getItem(key);
+              if (val === "undefined" || val === "null") {
+                return null;
+              }
+              return val;
+            };
+
+            var _setItem = localStorage.setItem.bind(localStorage);
+            localStorage.setItem = function(key, val) {
+              if (val === undefined || val === "undefined") {
+                localStorage.removeItem(key);
+                return;
+              }
+              return _setItem(key, val);
+            };
+          }
+        } catch(e) {}
+
+        // 2. Proteção universal para JSON.parse contra "undefined" is not valid JSON
+        var _parse = JSON.parse;
+        JSON.parse = function(text, reviver) {
+          if (text === undefined || text === null || text === "undefined" || text === "" || text === "null") {
+            return null;
+          }
+          try {
+            return _parse(text, reviver);
+          } catch (err) {
+            if (typeof text === 'string' && (text.indexOf("undefined") !== -1 || text.indexOf("null") !== -1)) {
+              return null;
+            }
+            throw err;
+          }
+        };
 
         // 3. Proteção universal para JSON.stringify contra referências circulares de elementos DOM (HTMLButtonElement)
         var _stringify = JSON.stringify;
@@ -74,11 +88,44 @@
           }
         };
 
-        // 4. Captura silenciosa de unhandledrejection para garantir zero erros no console
+        // 4. Silencia logs internos do rastreador ("buttons" e "Tracker.inited?")
+        var _log = console.log;
+        console.log = function() {
+          if (arguments.length > 0) {
+            var msg = String(arguments[0]);
+            if (
+              msg === "buttons" ||
+              msg.indexOf("buttons") === 0 ||
+              msg.indexOf("Tracker.inited?") !== -1 ||
+              msg.indexOf("button clicked pixel") !== -1 ||
+              msg.indexOf("tracking ic with") !== -1 ||
+              msg.indexOf("canSend") !== -1 ||
+              msg.indexOf("Tracker Meta version") !== -1
+            ) {
+              return;
+            }
+          }
+          _log.apply(console, arguments);
+        };
+
+        // 5. Proteção global para fetch com .catch(() => {}) prevenindo "Failed to fetch" de apis externas (ipify/ipapi)
+        var _fetch = window.fetch;
+        if (_fetch) {
+          window.fetch = function() {
+            return _fetch.apply(this, arguments).catch(function(err) {
+              return new Response(JSON.stringify({ ip: null, country: null }), {
+                status: 200,
+                headers: { 'Content-Type': 'application/json' }
+              });
+            });
+          };
+        }
+
+        // 6. Captura silenciosa de unhandledrejection para garantir zero erros no console
         window.addEventListener('unhandledrejection', function(event) {
           if (event && event.reason) {
             var reasonStr = String(event.reason.message || event.reason);
-            if (reasonStr.indexOf('Failed to fetch') !== -1 || reasonStr.indexOf('circular structure') !== -1) {
+            if (reasonStr.indexOf('Failed to fetch') !== -1 || reasonStr.indexOf('circular structure') !== -1 || reasonStr.indexOf('not valid JSON') !== -1) {
               event.preventDefault();
             }
           }
