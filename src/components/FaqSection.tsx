@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, HelpCircle, Zap } from 'lucide-react';
-import { PRICE } from '../constants';
+import { PRICE, CHECKOUT_URL } from '../constants';
 
 interface FaqSectionProps {
   onGoToCheckout: () => void;
@@ -101,13 +101,14 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onGoToCheckout }) => {
           <p className="text-xs sm:text-sm font-bold text-emerald-950 mb-3">
             Pronto para apoiar o conforto e a alimentação do seu cão com comida simples e fresca?
           </p>
-          <button
-            onClick={onGoToCheckout}
-            className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-xs transition-transform hover:scale-105 active:scale-95 cursor-pointer"
+          <a
+            href={CHECKOUT_URL}
+            onClick={() => onGoToCheckout()}
+            className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-xs transition-transform hover:scale-105 active:scale-95 cursor-pointer no-underline"
           >
             <Zap className="w-4 h-4 fill-white" />
             GARANTIR ACESSO IMEDIATO POR {PRICE}
-          </button>
+          </a>
         </div>
 
       </div>

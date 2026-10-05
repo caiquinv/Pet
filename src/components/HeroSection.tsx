@@ -1,12 +1,13 @@
 import React from 'react';
-import { Check, Sparkles, Heart, Star, Lock, Zap } from 'lucide-react';
-import { ASSETS, PRICE, ORIGINAL_PRICE } from '../constants';
+import { Check, Sparkles, Heart, Lock, Zap, ShieldCheck } from 'lucide-react';
+import { ASSETS, PRICE, ORIGINAL_PRICE, CHECKOUT_URL } from '../constants';
 
 interface HeroSectionProps {
   onGoToCheckout: () => void;
+  onDirectCheckout?: () => void;
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout, onDirectCheckout }) => {
   return (
     <section className="relative overflow-hidden pt-6 pb-14 lg:pt-10 lg:pb-20 bg-gradient-to-b from-amber-50/70 via-stone-50 to-[#faf8f5]">
       {/* Decorative background elements */}
@@ -15,22 +16,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout }) => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Top badge */}
+        {/* Top badge sem prova social fictícia */}
         <div className="flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm font-semibold text-emerald-800 mb-4 text-center">
           <span className="flex items-center gap-1.5 bg-emerald-100/90 text-emerald-900 px-3.5 py-1 rounded-full border border-emerald-300/70 shadow-xs">
             <Heart className="w-3.5 h-3.5 fill-rose-500 text-rose-500" />
             Método Prático Orientado por Médica Veterinária
           </span>
           <span className="hidden sm:inline text-stone-400">·</span>
-          <span className="text-stone-600 font-medium flex items-center gap-1">
-            <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />
-            Centenas de tutores satisfeitos com os resultados
+          <span className="text-stone-600 font-medium text-xs">
+            Apoio Nutricional e Cuidados Preventivos
           </span>
         </div>
 
-        {/* 1. Primary Headline */}
-        <div className="text-center max-w-4xl mx-auto mb-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-stone-900 tracking-tight leading-[1.15] mb-5">
+        {/* 1. Primary Headline & Subtitle reduzido a 2 linhas */}
+        <div className="text-center max-w-4xl mx-auto mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-stone-900 tracking-tight leading-[1.15] mb-3">
             O seu cão passa noites inteiras a{' '}
             <span className="relative inline-block text-orange-600 font-black">
               coçar-se e a morder as patas?
@@ -38,9 +38,32 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout }) => {
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-stone-700 max-w-3xl mx-auto leading-relaxed font-normal">
-            Descubra como a <strong>alimentação caseira natural, acessível e equilibrada</strong> pode ajudar a acalmar a comichão, favorecer a pele e devolver a tranquilidade ao seu cão — <strong>sem depender continuamente de soluções temporárias de farmácia</strong>.
+          {/* Subtítulo reduzido a 2 linhas com alegações suavizadas */}
+          <p className="text-base sm:text-lg text-stone-700 max-w-2xl mx-auto leading-snug font-normal">
+            Apoie o conforto da pele do seu cão com nutrição caseira equilibrada, ingredientes simples e económicos.
           </p>
+
+          {/* (1) BOTÃO DE COMPRA VERDE DE LARGURA TOTAL LOGO ABAIXO DO TÍTULO */}
+          <div className="w-full max-w-lg mx-auto mt-5 mb-2 space-y-2">
+            <a
+              href={CHECKOUT_URL}
+              onClick={() => onDirectCheckout?.()}
+              className="w-full group bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-black text-base sm:text-lg py-4 px-6 rounded-2xl shadow-xl shadow-emerald-700/30 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5 text-center no-underline cursor-pointer"
+            >
+              <Zap className="w-5 h-5 fill-white text-emerald-600 shrink-0" />
+              <span>Quero aceder ao guia completo – 14,90 €</span>
+            </a>
+
+            {/* (5) Garantia de 7 dias · MB WAY e cartão · Acesso imediato */}
+            <p className="text-xs sm:text-sm font-bold text-stone-700 text-center">
+              Garantia de 7 dias · MB WAY e cartão · Acesso imediato
+            </p>
+
+            {/* (6) Não substitui o acompanhamento veterinário */}
+            <p className="text-[11px] text-stone-500 text-center">
+              *Guia de apoio nutricional. Não substitui o acompanhamento veterinário.
+            </p>
+          </div>
         </div>
 
         {/* Hero Card Grid */}
@@ -129,9 +152,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout }) => {
                 <span className="text-[11px] text-stone-500 font-medium">(Pagamento único)</span>
               </div>
 
-              <button
-                onClick={onGoToCheckout}
-                className="w-full group bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-extrabold text-base sm:text-lg py-4 px-6 rounded-2xl shadow-lg shadow-emerald-700/25 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-3 cursor-pointer"
+              <a
+                href={CHECKOUT_URL}
+                onClick={() => onDirectCheckout?.()}
+                className="w-full group bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-extrabold text-base sm:text-lg py-4 px-6 rounded-2xl shadow-lg shadow-emerald-700/25 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-3 no-underline cursor-pointer"
               >
                 <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
                   <Zap className="w-5 h-5 fill-white text-emerald-600" />
@@ -140,18 +164,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout }) => {
                   <span className="block text-xs uppercase tracking-wider font-semibold opacity-90">Acesso Imediato</span>
                   <span className="block font-black text-base sm:text-lg leading-tight">QUERO ACEDER AO GUIA COMPLETO</span>
                 </div>
-              </button>
+              </a>
 
-              <div className="flex items-center justify-center gap-4 text-xs text-stone-500 pt-1">
-                <span className="flex items-center gap-1 font-medium">
-                  <Lock className="w-3.5 h-3.5 text-emerald-600" />
-                  Compra 100% Segura
-                </span>
-                <span>·</span>
-                <span className="font-medium text-emerald-800">
-                  Garantia de Satisfação de 7 Dias
-                </span>
+              <div className="text-center text-xs text-stone-600 font-semibold pt-1">
+                Garantia de 7 dias · MB WAY e cartão · Acesso imediato
               </div>
+              <p className="text-[11px] text-stone-500 text-center">
+                *Não substitui o acompanhamento veterinário
+              </p>
             </div>
 
           </div>

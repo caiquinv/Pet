@@ -3,9 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, lazy, Suspense } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { HeaderAlert } from './components/HeaderAlert';
 import { HeroSection } from './components/HeroSection';
+import { trackInitiateCheckout, trackViewContent } from './utils/tracker';
 
 // Code splitting: seções abaixo da dobra carregadas assincronamente para reduzir JavaScript inicial
 const ConnectionSection = lazy(() => import('./components/ConnectionSection').then(m => ({ default: m.ConnectionSection })));
@@ -16,14 +17,23 @@ const AnchoringSection = lazy(() => import('./components/AnchoringSection').then
 const GuaranteeSection = lazy(() => import('./components/GuaranteeSection').then(m => ({ default: m.GuaranteeSection })));
 const FaqSection = lazy(() => import('./components/FaqSection').then(m => ({ default: m.FaqSection })));
 const FooterSection = lazy(() => import('./components/FooterSection').then(m => ({ default: m.FooterSection })));
-const CheckoutModal = lazy(() => import('./components/CheckoutModal').then(m => ({ default: m.CheckoutModal })));
 const StickyBottomCta = lazy(() => import('./components/StickyBottomCta').then(m => ({ default: m.StickyBottomCta })));
-const RecentBuyerToast = lazy(() => import('./components/RecentBuyerToast').then(m => ({ default: m.RecentBuyerToast })));
 
 export default function App() {
-  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
+  // Dispara evento ViewContent garantindo que o tracker esteja inicializado
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      try {
+        trackViewContent();
+      } catch (err) {
+        console.warn('[Tracker] ViewContent capturado:', err);
+      }
+    }, 1200);
 
-  // Smooth scroll to the single offer/checkout box on the page
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Smooth scroll até a secção de oferta
   const handleScrollToOffer = () => {
     const offerElement = document.getElementById('checkout-box') || document.getElementById('oferta');
     if (offerElement) {
@@ -31,14 +41,12 @@ export default function App() {
     }
   };
 
-  // Direct checkout opens the Hotmart checkout page
-  const handleOpenCheckout = () => {
-    // If needed can track event or analytics
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'InitiateCheckout', {
-        value: 14.90,
-        currency: 'EUR'
-      });
+  // Dispara exclusivamente InitiateCheckout dentro de try/catch, sem bloquear a navegação
+  const handleBuyClick = () => {
+    try {
+      trackInitiateCheckout();
+    } catch {
+      // Silencioso - navegação nunca é interrompida
     }
   };
 
@@ -49,7 +57,7 @@ export default function App() {
 
       <main className="flex-1">
         {/* 1. Título Principal / Hero (renderizado imediatamente no primeiro frame para LCP ultrarrápido) */}
-        <HeroSection onGoToCheckout={handleScrollToOffer} />
+        <HeroSection onGoToCheckout={handleScrollToOffer} onDirectCheckout={handleBuyClick} />
 
         {/* Componentes abaixo da dobra com code-splitting */}
         <Suspense fallback={null}>
@@ -62,17 +70,17 @@ export default function App() {
           {/* 4. Especialista Responsável (Dra. Sofia Martins) */}
           <ExpertSection />
 
-          {/* 5. Testemunhos e Casos Práticos */}
+          {/* 5. Educação Nutricional e Benefícios Comprovados */}
           <SocialProofSection />
 
-          {/* 6. Proposta de Valor e Apresentação da Oferta (ÚNICO BOTÃO QUE ABRE O CHECKOUT) */}
-          <AnchoringSection onDirectCheckout={handleOpenCheckout} />
+          {/* 6. Proposta de Valor e Apresentação da Oferta */}
+          <AnchoringSection onDirectCheckout={handleBuyClick} />
 
           {/* 7. Garantia de Satisfação de 7 Dias -> leva até a secção da oferta */}
-          <GuaranteeSection onGoToCheckout={handleScrollToOffer} />
+          <GuaranteeSection onGoToCheckout={handleBuyClick} />
 
           {/* 8. Perguntas Frequentes -> leva até a secção da oferta */}
-          <FaqSection onGoToCheckout={handleScrollToOffer} />
+          <FaqSection onGoToCheckout={handleBuyClick} />
         </Suspense>
       </main>
 
@@ -80,17 +88,8 @@ export default function App() {
         {/* 9. Rodapé com Informações de Segurança e Isenção de Responsabilidade */}
         <FooterSection />
 
-        {/* Janela de Pagamento e Envio Imediato */}
-        <CheckoutModal
-          isOpen={isCheckoutOpen}
-          onClose={() => setIsCheckoutOpen(false)}
-        />
-
-        {/* Barra de Ação Fixa Inferior -> leva até a secção da oferta */}
-        <StickyBottomCta onGoToCheckout={handleScrollToOffer} />
-
-        {/* Notificação Discreta de Atividade Recente */}
-        <RecentBuyerToast />
+        {/* Barra de Ação Fixa Inferior */}
+        <StickyBottomCta onGoToCheckout={handleScrollToOffer} onDirectCheckout={handleBuyClick} />
       </Suspense>
     </div>
   );

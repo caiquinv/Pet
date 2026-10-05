@@ -233,12 +233,7 @@ export const AnchoringSection: React.FC<AnchoringSectionProps> = ({ onDirectChec
             
             <a
               href={CHECKOUT_URL}
-              onClick={(e) => {
-                if (onDirectCheckout) {
-                  // Track or trigger callback without preventing navigation if desired, or direct link
-                  onDirectCheckout();
-                }
-              }}
+              onClick={() => onDirectCheckout?.()}
               className="w-full group bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-black text-base sm:text-lg py-4 px-6 rounded-2xl shadow-xl shadow-emerald-700/30 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-3 cursor-pointer no-underline"
             >
               <Zap className="w-6 h-6 fill-white text-emerald-600 shrink-0" />
@@ -253,21 +248,24 @@ export const AnchoringSection: React.FC<AnchoringSectionProps> = ({ onDirectChec
             </a>
 
             {/* Selos de Segurança e Confiança */}
-            <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-stone-500 pt-2">
-              <span className="flex items-center gap-1.5 font-medium">
-                <Lock className="w-3.5 h-3.5 text-emerald-600" />
-                Pagamento Seguro e Criptografado
-              </span>
-              <span>·</span>
-              <span className="flex items-center gap-1.5 font-medium">
-                <CreditCard className="w-3.5 h-3.5 text-emerald-600" />
-                Cartão Bancário / MB WAY
-              </span>
-              <span>·</span>
-              <span className="flex items-center gap-1.5 font-medium">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                Garantia de 7 Dias
-              </span>
+            <div className="flex flex-col items-center justify-center gap-1.5 pt-2 text-center">
+              <p className="text-xs sm:text-sm font-bold text-stone-700">
+                Garantia de 7 dias · MB WAY e cartão · Acesso imediato
+              </p>
+              <div className="flex items-center justify-center gap-3 text-xs text-stone-500">
+                <span className="flex items-center gap-1">
+                  <Lock className="w-3.5 h-3.5 text-emerald-600" />
+                  Pagamento Seguro
+                </span>
+                <span>·</span>
+                <span className="flex items-center gap-1">
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                  Reembolso em 7 Dias
+                </span>
+              </div>
+              <p className="text-[11px] text-stone-500 pt-1">
+                *Guia de apoio nutricional. Não substitui o acompanhamento veterinário.
+              </p>
             </div>
 
           </div>

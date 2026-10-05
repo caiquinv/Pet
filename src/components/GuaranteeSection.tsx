@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Lock, RotateCcw, Sparkles } from 'lucide-react';
-import { PRICE } from '../constants';
+import { PRICE, CHECKOUT_URL } from '../constants';
 
 interface GuaranteeSectionProps {
   onGoToCheckout: () => void;
@@ -56,13 +56,14 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ onGoToChecko
             </div>
           </div>
 
-          <button
-            onClick={onGoToCheckout}
-            className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm sm:text-base py-3 px-8 rounded-xl shadow-md transition-all hover:scale-105 active:scale-95 cursor-pointer"
+          <a
+            href={CHECKOUT_URL}
+            onClick={() => onGoToCheckout()}
+            className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm sm:text-base py-3 px-8 rounded-xl shadow-md transition-all hover:scale-105 active:scale-95 cursor-pointer no-underline"
           >
             <Sparkles className="w-4 h-4" />
             <span>APROVEITAR A GARANTIA E ACEDER POR {PRICE}</span>
-          </button>
+          </a>
 
         </div>
 
