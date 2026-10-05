@@ -40,7 +40,7 @@ export const FooterSection: React.FC = () => {
             <ul className="space-y-1.5 text-stone-400">
               <li><a href="#pilares" className="hover:text-emerald-400 transition-colors">Os 4 Pilares da Nutrição</a></li>
               <li><a href="#expert" className="hover:text-emerald-400 transition-colors">Dra. Sofia Martins</a></li>
-              <li><a href="#prova-social" className="hover:text-emerald-400 transition-colors">Experiências e Testemunhos</a></li>
+              <li><a href="#prova-social" className="hover:text-emerald-400 transition-colors">Benefícios da Nutrição Caseira</a></li>
               <li><a href="#oferta" className="hover:text-emerald-400 transition-colors">Aceder ao Guia por {PRICE}</a></li>
               <li><a href="#garantia" className="hover:text-emerald-400 transition-colors">Garantia de Satisfação</a></li>
               <li><a href="#faq" className="hover:text-emerald-400 transition-colors">Perguntas Frequentes</a></li>
@@ -80,12 +80,12 @@ export const FooterSection: React.FC = () => {
         </div>
 
         {/* Disclaimer Warning */}
-        <div className="pt-8 pb-4 text-[11px] text-stone-400 leading-relaxed max-w-4xl mx-auto text-center space-y-2">
+        <div className="pt-8 pb-4 text-xs text-stone-400 leading-relaxed max-w-4xl mx-auto text-center space-y-2">
           <p>
-            <strong>Nota Responsável de Saúde Animal:</strong> Os conteúdos apresentados no Método Pele Tranquila Canina têm finalidade puramente educativa e de apoio à alimentação equilibrada do cão. Não constituem consulta médica veterinária nem substituem o diagnóstico, acompanhamento ou prescrição de um médico veterinário, especialmente em casos de doenças crónicas, infeções bacterianas graves ou alterações renais pré-existentes.
+            <strong>Aviso de Saúde Animal:</strong> O Método Pele Tranquila Canina tem caráter informativo e educativo e não substitui uma avaliação ou acompanhamento veterinário. Em caso de sintomas persistentes, agravamento ou preocupação com a saúde do seu cão, procure um médico veterinário.
           </p>
-          <p>
-            © {new Date().getFullYear()} Método Pele Tranquila Canina: Método de Nutrição Caseira · Todos os direitos reservados.
+          <p className="text-[11px] text-stone-500">
+            © {new Date().getFullYear()} Método Pele Tranquila Canina · Guia Digital de Nutrição Caseira · Todos os direitos reservados.
           </p>
         </div>
 

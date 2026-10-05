@@ -33,22 +33,22 @@ export const StickyBottomCta: React.FC<StickyBottomCtaProps> = ({ onGoToCheckout
           <p className="text-xs font-bold text-stone-900 leading-tight">
             Método Pele Tranquila Canina
           </p>
-          <p className="text-[11px] text-emerald-700 font-semibold">
-            100 Receitas + Lista Semáforo por apenas {PRICE} (Acesso Imediato)
+          <p className="text-xs text-emerald-700 font-semibold">
+            100 Receitas (50 Cozinhadas + 50 Cruas) por apenas {PRICE}
           </p>
         </div>
 
         <a
           href={CHECKOUT_URL}
           onClick={() => onDirectCheckout?.()}
-          className="w-full sm:w-auto flex-1 sm:flex-initial bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-black text-xs sm:text-sm py-3 px-6 rounded-xl shadow-md flex items-center justify-center gap-2 cursor-pointer no-underline transition-transform active:scale-95 text-center"
+          className="w-full sm:w-auto flex-1 sm:flex-initial bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-black text-xs sm:text-sm py-3.5 px-6 rounded-xl shadow-md flex items-center justify-center gap-2 cursor-pointer no-underline transition-transform active:scale-95 text-center"
         >
           <Zap className="w-4 h-4 fill-white text-emerald-600 shrink-0" />
-          <span>Quero aceder ao guia completo – 14,90 €</span>
+          <span>QUERO O MÉTODO PELE TRANQUILA – {PRICE}</span>
         </a>
 
-        <div className="sm:hidden text-[10px] text-stone-500 font-medium text-center">
-          Garantia de 7 dias · MB WAY e cartão · Acesso imediato
+        <div className="sm:hidden text-[11px] text-stone-500 font-semibold text-center">
+          Garantia de 7 dias · MB WAY e cartão · Acesso imediato no telemóvel
         </div>
 
       </div>

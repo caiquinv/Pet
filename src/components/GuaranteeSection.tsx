@@ -22,11 +22,11 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ onGoToChecko
           </p>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-stone-900 tracking-tight leading-tight mb-4">
-            Experimente sem qualquer risco pessoal
+            Pode conhecer o material e decidir com calma
           </h2>
 
-          <p className="text-stone-700 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Adquira o <strong>Método Pele Tranquila Canina</strong> hoje, consulte as 100 receitas e prepare as primeiras refeições frescas para o seu cão com total tranquilidade.
+          <p className="text-stone-700 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed mb-8">
+            Adquira o <strong>Método Pele Tranquila Canina</strong> hoje por {PRICE}, consulte as 100 receitas e avalie as orientações no conforto da sua casa. Se nos primeiros 7 dias considerar que não é o que procurava, devolvemos 100% do seu dinheiro.
           </p>
 
           {/* Guarantee Highlights */}
@@ -35,10 +35,10 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ onGoToChecko
               <RotateCcw className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" />
               <div>
                 <h3 className="font-extrabold text-stone-900 text-sm mb-1">
-                  Reembolso integral
+                  Reembolso Integral sem Complicações
                 </h3>
                 <p className="text-xs text-stone-600 leading-relaxed">
-                  Se nos primeiros 7 dias considerar que o material não foi útil, basta enviar-nos uma mensagem por e-mail para receber a devolução total do valor pago, sem complicações.
+                  Tem 7 dias para ler o guia e testar as receitas. Se achar que o método não foi útil, basta solicitar o reembolso na plataforma Hotmart para devolução imediata do valor.
                 </p>
               </div>
             </div>
@@ -47,10 +47,10 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ onGoToChecko
               <Lock className="w-6 h-6 text-amber-600 shrink-0 mt-0.5" />
               <div>
                 <h3 className="font-extrabold text-stone-900 text-sm mb-1">
-                  Acesso permanente
+                  Acesso Permanente no Telemóvel
                 </h3>
                 <p className="text-xs text-stone-600 leading-relaxed">
-                  O guia em PDF fica guardado no seu telemóvel, tablet ou computador para consultar sempre que necessitar, sem qualquer limite temporal.
+                  O guia digital em PDF fica guardado no seu telemóvel, tablet ou computador para consultar na cozinha ou às compras sempre que necessitar.
                 </p>
               </div>
             </div>
@@ -59,10 +59,10 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ onGoToChecko
           <a
             href={CHECKOUT_URL}
             onClick={() => onGoToCheckout()}
-            className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm sm:text-base py-3 px-8 rounded-xl shadow-md transition-all hover:scale-105 active:scale-95 cursor-pointer no-underline"
+            className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-base sm:text-lg py-4 px-8 rounded-2xl shadow-xl shadow-emerald-700/25 transition-all hover:scale-105 active:scale-95 cursor-pointer no-underline"
           >
-            <Sparkles className="w-4 h-4" />
-            <span>APROVEITAR A GARANTIA E ACEDER POR {PRICE}</span>
+            <Sparkles className="w-5 h-5" />
+            <span>QUERO O MÉTODO PELE TRANQUILA – {PRICE}</span>
           </a>
 
         </div>

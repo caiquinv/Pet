@@ -16,21 +16,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout, onDire
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Top badge sem prova social fictícia */}
+        {/* Top badge sem promessas falsas */}
         <div className="flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm font-semibold text-emerald-800 mb-4 text-center">
-          <span className="flex items-center gap-1.5 bg-emerald-100/90 text-emerald-900 px-3.5 py-1 rounded-full border border-emerald-300/70 shadow-xs">
+          <span className="flex items-center gap-1.5 bg-emerald-100/90 text-emerald-900 px-3.5 py-1.5 rounded-full border border-emerald-300/70 shadow-xs">
             <Heart className="w-3.5 h-3.5 fill-rose-500 text-rose-500" />
             Método Prático Orientado por Médica Veterinária
           </span>
           <span className="hidden sm:inline text-stone-400">·</span>
-          <span className="text-stone-600 font-medium text-xs">
-            Apoio Nutricional e Cuidados Preventivos
+          <span className="text-stone-600 font-medium text-xs sm:text-sm">
+            Guia Digital em PDF · Acesso Imediato
           </span>
         </div>
 
-        {/* 1. Primary Headline & Subtitle reduzido a 2 linhas */}
-        <div className="text-center max-w-4xl mx-auto mb-6">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-stone-900 tracking-tight leading-[1.15] mb-3">
+        {/* 1. Primary Headline & Clear Value Proposition */}
+        <div className="text-center max-w-4xl mx-auto mb-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-extrabold text-stone-900 tracking-tight leading-[1.15] mb-3">
             O seu cão passa noites inteiras a{' '}
             <span className="relative inline-block text-orange-600 font-black">
               coçar-se e a morder as patas?
@@ -38,30 +38,43 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout, onDire
             </span>
           </h1>
 
-          {/* Subtítulo reduzido a 2 linhas com alegações suavizadas */}
-          <p className="text-base sm:text-lg text-stone-700 max-w-2xl mx-auto leading-snug font-normal">
-            Apoie o conforto da pele do seu cão com nutrição caseira equilibrada, ingredientes simples e económicos.
-          </p>
+          {/* Sequência lógica: Problema -> Solução -> Para quem é -> O que recebe */}
+          <div className="max-w-2xl mx-auto text-stone-700 text-sm sm:text-base leading-relaxed space-y-2 mb-6">
+            <p>
+              O <strong>Método Pele Tranquila Canina</strong> é o guia prático em formato digital para tutores que querem compreender a sensibilidade da pele do seu cão e organizar uma rotina alimentar fresca, equilibrada e económica.
+            </p>
+            <p className="text-xs sm:text-sm text-stone-600 font-medium">
+              Inclui <strong className="text-emerald-800 font-bold">100 receitas para cães</strong> (50 cozinhadas e 50 cruas), a <strong>Lista Semáforo</strong> de alimentos e o protocolo de transição segura para o dia a dia.
+            </p>
+          </div>
 
-          {/* (1) BOTÃO DE COMPRA VERDE DE LARGURA TOTAL LOGO ABAIXO DO TÍTULO */}
-          <div className="w-full max-w-lg mx-auto mt-5 mb-2 space-y-2">
+          {/* Caixa de Ação Rápida: Preço claro + CTA forte */}
+          <div className="w-full max-w-lg mx-auto space-y-2.5">
+            <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-stone-700 font-semibold mb-1">
+              <span>Acesso digital completo por apenas</span>
+              <span className="text-emerald-700 font-black text-lg sm:text-xl">{PRICE}</span>
+              <span className="text-stone-500 font-normal">(pagamento único)</span>
+            </div>
+
             <a
               href={CHECKOUT_URL}
               onClick={() => onDirectCheckout?.()}
               className="w-full group bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-black text-base sm:text-lg py-4 px-6 rounded-2xl shadow-xl shadow-emerald-700/30 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5 text-center no-underline cursor-pointer"
             >
               <Zap className="w-5 h-5 fill-white text-emerald-600 shrink-0" />
-              <span>Quero aceder ao guia completo – 14,90 €</span>
+              <span>QUERO O MÉTODO PELE TRANQUILA – {PRICE}</span>
             </a>
 
-            {/* (5) Garantia de 7 dias · MB WAY e cartão · Acesso imediato */}
-            <p className="text-xs sm:text-sm font-bold text-stone-700 text-center">
-              Garantia de 7 dias · MB WAY e cartão · Acesso imediato
-            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs text-stone-600 font-semibold pt-1">
+              <span>Garantia de 7 dias</span>
+              <span>·</span>
+              <span>MB WAY e cartão</span>
+              <span>·</span>
+              <span>Acesso imediato no telemóvel</span>
+            </div>
 
-            {/* (6) Não substitui o acompanhamento veterinário */}
             <p className="text-[11px] text-stone-500 text-center">
-              *Guia de apoio nutricional. Não substitui o acompanhamento veterinário.
+              *Guia digital de apoio informativo e nutricional. Não substitui o acompanhamento veterinário.
             </p>
           </div>
         </div>
@@ -82,26 +95,26 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout, onDire
                 className="w-full h-64 sm:h-72 object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent flex flex-col justify-end p-4 text-white">
-                <span className="text-xs font-bold text-emerald-300 uppercase tracking-wider">Ingredientes Frescos</span>
+                <span className="text-xs font-bold text-emerald-300 uppercase tracking-wider">Ingredientes de Supermercado</span>
                 <p className="text-sm sm:text-base font-bold leading-snug">
                   Carnes magras, legumes frescos e nutrientes que hidratam e apoiam o aparelho digestivo
                 </p>
               </div>
             </div>
 
-            {/* Overlapping Guide Tag Badge */}
+            {/* Overlapping Guide Tag Badge: Total 100 receitas bem evidente */}
             <div className="mt-4 w-full flex items-center justify-between p-3.5 bg-amber-50 rounded-xl border border-amber-200/80">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-orange-500 text-white flex items-center justify-center font-black text-sm shrink-0 shadow-sm">
                   100
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-stone-900 leading-tight">100 Receitas Cozinhadas & Cruas</p>
-                  <p className="text-[11px] text-stone-600">Simples, económicas e adaptadas às necessidades do animal</p>
+                  <p className="text-xs font-bold text-stone-900 leading-tight">100 RECEITAS PARA CÃES</p>
+                  <p className="text-[11px] text-stone-600">50 opções cozinhadas + 50 opções cruas equilibradas</p>
                 </div>
               </div>
-              <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-md">
-                Guia Completo
+              <span className="text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-md shrink-0">
+                Guia em PDF
               </span>
             </div>
           </div>
@@ -110,36 +123,48 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout, onDire
           <div className="lg:col-span-6 flex flex-col">
             <div className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-lg w-fit mb-3">
               <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-              MÉTODO DE NUTRIÇÃO CASEIRA
+              CONTEÚDO DO GUIA DIGITAL
             </div>
 
             <h2 className="text-2xl sm:text-3xl font-black text-stone-900 tracking-tight leading-snug mb-3">
-              Método Pele Tranquila Canina: o guia prático para ajudar a aliviar o desconforto do seu cão
+              O que recebe no seu acesso ao Método Pele Tranquila:
             </h2>
 
-            <p className="text-sm sm:text-base text-stone-600 mb-5 leading-relaxed">
-              Tenha acesso ao método prático da <strong>Dra. Sofia Martins</strong> com orientações de nutrição caseira hipoalergénica, 100 receitas fáceis e a lista semáforo dos alimentos.
+            <p className="text-xs sm:text-sm text-stone-600 mb-5 leading-relaxed">
+              Desenvolvido pela Médica Veterinária <strong>Dra. Sofia Martins</strong> para ajudar tutores a cuidar da pele e da alimentação do seu cão com praticidade.
             </p>
 
-            {/* Benefit Checkmarks */}
-            <ul className="space-y-2.5 mb-6 text-sm text-stone-700">
+            {/* Benefit Checkmarks: Tangível e Claro */}
+            <ul className="space-y-3 mb-6 text-xs sm:text-sm text-stone-700">
               <li className="flex items-start gap-2.5">
                 <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
                   <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                 </span>
-                <span><strong>Noites de sono descansadas:</strong> apoio no alívio da comichão e da lambedura insistente das patas</span>
+                <span><strong>📘 Guia Digital Completo:</strong> O passo a passo para compreender a rotina e os cuidados com a pele</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
                   <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                 </span>
-                <span><strong>Transição Gradual Segura:</strong> protocolo em 4 etapas para proteger o equilíbrio intestinal</span>
+                <span><strong>🍲 50 Receitas Cozinhadas:</strong> Fáceis, nutritivas e preparadas com alimentos simples</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
                   <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                 </span>
-                <span><strong>Alimentação Natural Equilibrada:</strong> proporções práticas de carnes, legumes e fibras</span>
+                <span><strong>🥩 50 Receitas Cruas:</strong> Formulações naturais com orientações seguras</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                </span>
+                <span><strong>📋 Lista Semáforo:</strong> O que oferecer, o que pede cautela e o que nunca dar</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                </span>
+                <span><strong>🔄 Protocolo em 4 Fases:</strong> Transição suave que protege a saúde digestiva</span>
               </li>
             </ul>
 
@@ -148,8 +173,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout, onDire
               <div className="flex items-baseline gap-2 mb-1">
                 <span className="text-xs text-stone-500 line-through">De {ORIGINAL_PRICE}</span>
                 <span className="text-xs font-bold text-emerald-700 uppercase">Por apenas</span>
-                <span className="text-2xl font-black text-emerald-600">{PRICE}</span>
-                <span className="text-[11px] text-stone-500 font-medium">(Pagamento único)</span>
+                <span className="text-2xl sm:text-3xl font-black text-emerald-600">{PRICE}</span>
+                <span className="text-xs text-stone-500 font-medium">(Pagamento único)</span>
               </div>
 
               <a
@@ -162,12 +187,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout, onDire
                 </div>
                 <div className="text-left">
                   <span className="block text-xs uppercase tracking-wider font-semibold opacity-90">Acesso Imediato</span>
-                  <span className="block font-black text-base sm:text-lg leading-tight">QUERO ACEDER AO GUIA COMPLETO</span>
+                  <span className="block font-black text-base sm:text-lg leading-tight">QUERO O MÉTODO PELE TRANQUILA</span>
                 </div>
               </a>
 
               <div className="text-center text-xs text-stone-600 font-semibold pt-1">
-                Garantia de 7 dias · MB WAY e cartão · Acesso imediato
+                Garantia de 7 dias · MB WAY e cartão · Acesso imediato no telemóvel
               </div>
               <p className="text-[11px] text-stone-500 text-center">
                 *Não substitui o acompanhamento veterinário
@@ -192,8 +217,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToCheckout, onDire
             <p className="text-xs text-stone-600 font-medium">Transição Gradual e Sem Sobressaltos</p>
           </div>
           <div className="p-3 bg-white/80 rounded-xl border border-stone-200/60 shadow-xs">
-            <p className="text-xl sm:text-2xl font-black text-emerald-800">+100</p>
-            <p className="text-xs text-stone-600 font-medium">Receitas Cozinhadas & Cruas</p>
+            <p className="text-xl sm:text-2xl font-black text-emerald-800">100</p>
+            <p className="text-xs text-stone-600 font-medium">Receitas (50 Cozinhadas + 50 Cruas)</p>
           </div>
         </div>
 

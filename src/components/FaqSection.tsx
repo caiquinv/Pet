@@ -11,36 +11,36 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onGoToCheckout }) => {
 
   const faqs = [
     {
-      q: 'Como recebo o acesso após a confirmação do pagamento?',
-      a: 'O envio é imediato e automático! Logo que o pagamento seja processado, recebe no seu e-mail a ligação exclusiva para descarregar o Método Pele Tranquila Canina em formato digital (ficheiro PDF de leitura fácil em qualquer telemóvel, tablet ou computador), com todas as 100 receitas e a lista semáforo dos alimentos.',
+      q: 'Como recebo o método e como funciona o acesso?',
+      a: 'O acesso é imediato e 100% digital. Assim que o pagamento de 14,90 € for confirmado, recebe de imediato no seu e-mail a ligação direta para descarregar o Método Pele Tranquila Canina com todas as 100 receitas e a lista semáforo dos alimentos.',
     },
     {
-      q: 'A alimentação caseira não fica mais cara do que a ração seca?',
-      a: 'Pelo contrário! O objetivo do método é recorrer a ingredientes comuns e nutritivos (como carne de frango ou vaca picada, miudezas, ovos, abóbora, cenoura e curgete). Em Portugal, a alimentação fresca de um cão de porte pequeno a médio costuma rondar entre 30 € e 45 € mensais, um valor significativamente mais baixo do que sacos de rações veterinárias especiais.',
+      q: 'É um produto físico? Posso ler no telemóvel?',
+      a: 'É um guia totalmente digital em formato PDF. Não precisa de esperar por encomendas pelo correio nem pagar portes de envio. Fica guardado diretamente no seu telemóvel, tablet ou computador para consultar na cozinha ou às compras com toda a comodidade.',
     },
     {
-      q: 'Não tenho disponibilidade para cozinhar todos os dias. Como posso organizar-me?',
-      a: 'Não precisa de cozinhar diariamente! O método ensina a planear e preparar as doses a cada 15 ou 20 dias: prepara a comida numa única ocasião (em cerca de hora e meia), distribui as doses pesadas em caixas herméticas e guarda no congelador. No dia a dia, basta passar a porção para o frigorífico na véspera. É tão prático como deitar ração na tigela.',
+      q: 'Quanto tempo tenho acesso ao método?',
+      a: 'O acesso é vitalício e permanente. O ficheiro fica guardado nos seus dispositivos para consultar sempre que quiser. Trata-se de um pagamento único de 14,90 €, sem qualquer subscrição ou mensalidade posterior.',
     },
     {
-      q: 'O meu cão é intolerante ao frango. Posso aplicar o método?',
-      a: 'Sem dúvida! O material apresenta diversas alternativas proteicas (carne de peru, carne de vaca, peixes ricos em ómega-3 como a sardinha, ou carne de porco magra), permitindo contornar sensibilidades alimentares específicas com facilidade.',
+      q: 'O método substitui uma consulta veterinária?',
+      a: 'Não. O Método Pele Tranquila Canina tem caráter estritamente educativo, informativo e preventivo de apoio ao bem-estar diário. Não substitui o diagnóstico, acompanhamento nem os tratamentos prescritos pelo médico veterinário do seu animal.',
     },
     {
-      q: 'Cães seniores, cães jovens ou animais esterilizados podem beneficiar da alimentação natural?',
-      a: 'Sim, desde que a dose calórica e os nutrientes sejam devidamente equilibrados. O guia inclui orientações claras de ajuste para animais esterilizados com tendência a ganhar peso, bem como para cães com ritmo de vida mais calmo ou animais jovens.',
+      q: 'As receitas são adequadas para qualquer cão?',
+      a: 'As formulações foram desenvolvidas para cães de diferentes portes e idades, utilizando ingredientes frescos de elevada digestibilidade. O guia inclui tabelas de dosagem prática de acordo com o peso do cão e alternativas para animais com sensibilidades específicas (como intolerância a frango).',
     },
     {
-      q: 'Como sei a porção adequada para o porte do meu cão?',
-      a: 'O guia traz tabelas práticas de proporções diárias de acordo com o porte e o peso do cão. Fica a saber com precisão as quantidades recomendadas de proteínas, legumes e fibras para compor cada refeição.',
+      q: 'Posso oferecer as receitas ao meu cão todos os dias?',
+      a: 'Sim. As receitas foram pensadas para poderem fazer parte da alimentação quotidiana ou para serem alternadas de forma equilibrada. O guia ensina inclusive a preparar refeições para 15 a 20 dias de uma só vez e congelar em porções práticas, poupando tempo na cozinha.',
     },
     {
-      q: 'O meu cão sempre comeu ração a vida toda. A transição pode causar diarreia?',
-      a: 'Se a transição for feita de forma repentina, o organismo pode estranhar. É exatamente por essa razão que o guia inclui o Protocolo de Transição Gradual em 4 Fases (Dias 1-2: 75% ração / 25% comida caseira; Dias 3-4: 50%/50%; Dias 5-6: 25%/75%; Dia 7+: 100% caseiro), permitindo uma adaptação intestinal harmoniosa.',
+      q: 'O meu cão sempre comeu ração. A transição pode causar desarranjos?',
+      a: 'Para prevenir qualquer perturbação digestiva, o método apresenta um Protocolo de Transição Gradual em 4 Fases (Dias 1-2: 75% ração / 25% caseiro; Dias 3-4: 50%/50%; Dias 5-6: 25%/75%; Dia 7+: 100% caseiro), permitindo uma adaptação intestinal harmoniosa.',
     },
     {
-      q: 'O valor de 14,90 € é uma mensalidade ou pagamento único?',
-      a: 'É um pagamento ÚNICO de 14,90 €. Não existe qualquer subscrição, fidelização nem cobranças posteriores. Garante acesso permanente ao material.',
+      q: 'A alimentação caseira não fica mais cara do que a ração industrializada?',
+      a: 'Pelo contrário! O método baseia-se em ingredientes simples de supermercado e talho (carnes picadas, ovos, abóbora, cenoura, peixe económico). Em Portugal, a alimentação fresca de um cão de porte pequeno a médio costuma rondar entre 30 € e 45 € mensais, gerando uma poupança substancial face a rações veterinárias especiais.',
     },
   ];
 
@@ -104,10 +104,10 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onGoToCheckout }) => {
           <a
             href={CHECKOUT_URL}
             onClick={() => onGoToCheckout()}
-            className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-xs transition-transform hover:scale-105 active:scale-95 cursor-pointer no-underline"
+            className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-sm sm:text-base px-7 py-3.5 rounded-2xl shadow-lg shadow-emerald-700/20 transition-transform hover:scale-105 active:scale-95 cursor-pointer no-underline"
           >
             <Zap className="w-4 h-4 fill-white" />
-            GARANTIR ACESSO IMEDIATO POR {PRICE}
+            QUERO O MÉTODO PELE TRANQUILA – {PRICE}
           </a>
         </div>
 

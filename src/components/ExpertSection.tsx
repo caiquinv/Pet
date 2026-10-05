@@ -48,23 +48,23 @@ export const ExpertSection: React.FC = () => {
             </div>
 
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-stone-900 tracking-tight leading-tight">
-              &ldquo;Muitas vezes tratam-se apenas os sinais exteriores, esquecendo que a verdadeira causa começa na tigela de comida.&rdquo;
+              &ldquo;Muitas vezes concentramos a atenção apenas nos sinais exteriores e esquecemos de olhar para a rotina como um todo — incluindo a alimentação.&rdquo;
             </h2>
 
-            <p className="text-stone-700 text-base leading-relaxed">
-              Olá, sou a <strong>Dra. Sofia Martins</strong>, Médica Veterinária. Ao longo da minha prática clínica, acompanhei inúmeros tutores preocupados com cães que apresentavam vermelhidão na pele, lambedura compulsiva das patas e comichão persistente.
+            <p className="text-stone-700 text-sm sm:text-base leading-relaxed">
+              Olá, sou a <strong>Dra. Sofia Martins</strong>, Médica Veterinária. No contacto frequente com tutores dedicados, acompanho a preocupação de ver o animal desconfortável com a pele sensibilizada, comichão e lambedura insistente.
             </p>
 
-            <p className="text-stone-700 text-base leading-relaxed">
-              É frequente recorrer-se a soluções de alívio rápido que acalmam a comichão durante alguns dias, mantendo o animal com uma ração seca ultraprocessada rica em conservantes e farinhas industriais. <strong>Quando o tratamento termina, o desconforto volta porque a origem na alimentação não foi revista.</strong>
+            <p className="text-stone-700 text-sm sm:text-base leading-relaxed">
+              Muitas vezes tenta-se apenas uma solução rápida através de loções ou mudanças pontuais de ração, sem estruturar a rotina de cuidados de forma abrangente. <strong>Compreender o que o animal ingere e introduzir alimentos frescos com boa hidratação é um passo fundamental para o seu bem-estar diário.</strong>
             </p>
 
-            <div className="p-4 bg-emerald-50/70 rounded-2xl border border-emerald-200 text-stone-800 text-sm leading-relaxed">
-              <p className="font-semibold text-emerald-950 mb-1">
-                O Propósito da Alimentação Caseira
+            <div className="p-4 sm:p-5 bg-emerald-50/70 rounded-2xl border border-emerald-200 text-stone-800 text-sm leading-relaxed">
+              <p className="font-bold text-emerald-950 mb-1.5">
+                O Propósito do Método Pele Tranquila Canina
               </p>
               <p className="text-xs sm:text-sm text-stone-700">
-                &ldquo;Estruturei o <strong>Método Pele Tranquila Canina</strong> para que qualquer tutor consiga preparar refeições frescas, simples e equilibradas em sua casa. Ajudar a restaurar o equilíbrio do organismo através de ingredientes naturais e ver o alívio na vida do animal é a maior satisfação do meu trabalho.&rdquo;
+                &ldquo;Estruturei este método para que qualquer tutor tenha em mãos orientações práticas, a lista de alimentos permitidos e 100 receitas simples de preparar em casa. Apoiar a vitalidade e a qualidade de vida dos cães através de comida de verdade é o que me move todos os dias.&rdquo;
               </p>
             </div>
 

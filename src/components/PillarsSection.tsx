@@ -66,13 +66,14 @@ export const PillarsSection: React.FC = () => {
               <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-lg mb-4">
                 01
               </div>
-              <h3 className="font-extrabold text-stone-900 text-lg mb-2">Comida Fresca e Real</h3>
-              <p className="text-sm text-stone-600 leading-relaxed">
-                Ingredientes frescos, preparados de forma simples e sem corantes artificiais, facilitando o aproveitamento dos nutrientes.
+              <h3 className="font-extrabold text-stone-900 text-lg mb-1.5">Comida Fresca e Real</h3>
+              <p className="text-[11px] font-bold text-emerald-800 uppercase tracking-wider mb-2">O que significa para si e para o seu cão:</p>
+              <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                Refeições com carnes magras e legumes frescos fáceis de comprar, com humidade natural e digestão muito mais suave do que granulados secos ultraprocessados.
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-stone-100 text-xs font-semibold text-emerald-700 flex items-center gap-1">
-              <Check className="w-4 h-4" /> Elevada digestibilidade
+              <Check className="w-4 h-4" /> Digestão leve e hidratação
             </div>
           </div>
 
@@ -81,13 +82,14 @@ export const PillarsSection: React.FC = () => {
               <div className="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-black text-lg mb-4">
                 02
               </div>
-              <h3 className="font-extrabold text-stone-900 text-lg mb-2">Transição Gradual</h3>
-              <p className="text-sm text-stone-600 leading-relaxed">
-                Protocolo progressivo em 4 fases para permitir a adaptação natural do sistema digestivo, evitando fezes moles ou indisposição.
+              <h3 className="font-extrabold text-stone-900 text-lg mb-1.5">Transição Gradual</h3>
+              <p className="text-[11px] font-bold text-amber-800 uppercase tracking-wider mb-2">O que significa para si e para o seu cão:</p>
+              <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                Um protocolo simples em 4 fases para mudar a alimentação com calma, permitindo que a flora intestinal se adapte sem sustos, fezes moles ou indisposição.
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-stone-100 text-xs font-semibold text-amber-700 flex items-center gap-1">
-              <Check className="w-4 h-4" /> Adaptação tranquila
+              <Check className="w-4 h-4" /> Adaptação segura sem desarranjos
             </div>
           </div>
 
@@ -96,13 +98,14 @@ export const PillarsSection: React.FC = () => {
               <div className="w-12 h-12 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center font-black text-lg mb-4">
                 03
               </div>
-              <h3 className="font-extrabold text-stone-900 text-lg mb-2">Lista Semáforo</h3>
-              <p className="text-sm text-stone-600 leading-relaxed">
-                Um guia visual prático para consultar na cozinha: identifique de imediato o que é benéfico, o que pede cautela e o que é proibido.
+              <h3 className="font-extrabold text-stone-900 text-lg mb-1.5">Lista Semáforo</h3>
+              <p className="text-[11px] font-bold text-rose-800 uppercase tracking-wider mb-2">O que significa para si e para o seu cão:</p>
+              <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                Tranquilidade total na cozinha: consulta rápida no telemóvel para saber de imediato o que pode colocar na tigela, o que exige cautela e o que nunca oferecer.
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-stone-100 text-xs font-semibold text-rose-700 flex items-center gap-1">
-              <Check className="w-4 h-4" /> Clareza e segurança
+              <Check className="w-4 h-4" /> Certeza rápida nas escolhas
             </div>
           </div>
 
@@ -111,13 +114,14 @@ export const PillarsSection: React.FC = () => {
               <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-black text-lg mb-4">
                 04
               </div>
-              <h3 className="font-extrabold text-stone-900 text-lg mb-2">100 Receitas Equilibradas</h3>
-              <p className="text-sm text-stone-600 leading-relaxed">
-                50 receitas cozinhadas e 50 opções cruas, pensadas para apoiar a vitalidade e o conforto alimentar do seu animal.
+              <h3 className="font-extrabold text-stone-900 text-lg mb-1.5">100 Receitas para Cães</h3>
+              <p className="text-[11px] font-bold text-blue-800 uppercase tracking-wider mb-2">O que significa para si e para o seu cão:</p>
+              <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                50 receitas cozinhadas e 50 opções cruas equilibradas. Tem sempre variedade à mão, sabe organizar doses para várias semanas e poupa nas idas às compras.
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-stone-100 text-xs font-semibold text-blue-700 flex items-center gap-1">
-              <Check className="w-4 h-4" /> Poupança nas compras
+              <Check className="w-4 h-4" /> 50 cozinhadas + 50 cruas
             </div>
           </div>
 

@@ -26,7 +26,7 @@ export const SocialProofSection: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-100/70 px-3 py-1 rounded-full mb-3">
             <Heart className="w-3.5 h-3.5 fill-rose-500 text-rose-500" />
             BENEFÍCIOS DA ALIMENTAÇÃO NATURAL
@@ -37,6 +37,44 @@ export const SocialProofSection: React.FC = () => {
           <p className="text-stone-600 text-base sm:text-lg">
             Compreenda a ciência simples de substituir aditivos e farinhas processadas por refeições biológicas e equilibradas.
           </p>
+        </div>
+
+        {/* Card "Este método pode ser para si se..." */}
+        <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-emerald-500/30 shadow-md mb-12 max-w-4xl mx-auto">
+          <div className="text-center sm:text-left mb-6">
+            <span className="text-xs font-black text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full uppercase tracking-wider">
+              Identificação & Perfil
+            </span>
+            <h3 className="text-xl sm:text-2xl font-black text-stone-900 mt-2">
+              Este método pode ser para si se...
+            </h3>
+            <p className="text-xs sm:text-sm text-stone-600 mt-1">
+              Desenvolvido para tutores conscientes que procuram cuidar melhor do seu cão com informação prática e responsável.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-stone-700">
+            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-stone-50 border border-stone-100">
+              <Check className="w-4 h-4 text-emerald-600 shrink-0 stroke-[2.5] mt-0.5" />
+              <span>Quer <strong>compreender melhor</strong> o desconforto da pele do seu cão</span>
+            </div>
+            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-stone-50 border border-stone-100">
+              <Check className="w-4 h-4 text-emerald-600 shrink-0 stroke-[2.5] mt-0.5" />
+              <span>Procura <strong>organizar melhor</strong> a rotina de cuidados e refeições</span>
+            </div>
+            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-stone-50 border border-stone-100">
+              <Check className="w-4 h-4 text-emerald-600 shrink-0 stroke-[2.5] mt-0.5" />
+              <span>Quer conhecer melhor a relação entre <strong>alimentação e rotina</strong></span>
+            </div>
+            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-stone-50 border border-stone-100">
+              <Check className="w-4 h-4 text-emerald-600 shrink-0 stroke-[2.5] mt-0.5" />
+              <span>Procura <strong>novas opções de receitas</strong> para o seu cão (100 opções disponíveis)</span>
+            </div>
+            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-stone-50 border border-stone-100 sm:col-span-2">
+              <Check className="w-4 h-4 text-emerald-600 shrink-0 stroke-[2.5] mt-0.5" />
+              <span>Quer <strong>informação prática para aplicar no dia a dia</strong> com ingredientes acessíveis</span>
+            </div>
+          </div>
         </div>
 
         {/* Visual Transformation Banner */}
